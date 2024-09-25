@@ -1,0 +1,19 @@
+{% comment %} <style>
+.need-card{
+    border: 2px solid black;
+    width: 17rem;
+    height: 20rem;
+    padding: 4rem;
+}
+</style> {% endcomment %}
+
+<div style="background-color: {{bgColor}}; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem" class="need-card">
+
+    <div class="width:14rem;">
+        <img src={{icon}}/>
+    </div>
+    <div>
+        <h3>{{title}}</h3>
+        <p>{{text}}</p>
+    </div>
+</div>

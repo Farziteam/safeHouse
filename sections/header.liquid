@@ -64,6 +64,22 @@
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
 
+  .cta-button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #ff6230;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+
+    
+  }
+  .head-navs{
+    display: flex;
+  }
+
   @media screen and (min-width: 750px) {
     .list-menu__item--link {
       padding-bottom: 0.5rem;
@@ -84,8 +100,17 @@
 </style>
 
 {%- style -%}
-  .header {
-    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
+  .header-wrapper .header {
+    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 1 }}px 3rem;
+    border: 2px solid #d9d9d9;
+    border-radius: 2rem;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    
   }
 
   .section-header {
@@ -166,13 +191,13 @@
             {% comment %} {%- else -%}
               <span class="h2">{{ shop.name }}</span> {% endcomment %}
             {%- endif -%}
-            <span class="h1>{{ logo_title }}</span>
+            <span class="h1">{{ logo_title }}</span>
           </a>
       {%- if request.page_type == 'index' -%}
         </h1>
       {%- endif -%}
     {%- endif -%}
-
+    <div class="head-navs">
     {%- liquid
       if section.settings.menu != blank
         if section.settings.menu_type_desktop == 'dropdown'
@@ -226,7 +251,7 @@
           </localization-form>
         {% endif %}
 
-        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+        {%- if section.settings.enable_language_selector or localization.available_languages.size > 1 -%}
           <localization-form class="small-hide medium-hide" data-prevent-hide>
             {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
               <div>
@@ -236,10 +261,12 @@
             {%- endform -%}
           </localization-form>
         {%- endif -%}
-      </div>
-      {% render 'header-search', input_id: 'Search-In-Modal' %}
-
-      {%- if shop.customer_accounts_enabled -%}
+      </div> 
+      {% comment %} {% render 'header-search', input_id: 'Search-In-Modal' %} {% endcomment %}
+      <a href="{{settings.cta_url}}" class="cta-button" >
+        {{ "Get Started →"}}
+      </a>
+      {% comment %} {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
           {%- if section.settings.enable_customer_avatar -%}
             <account-icon>
@@ -262,16 +289,16 @@
             -%}
           </span>
         </a>
-      {%- endif -%}
+      {%- endif -%} {% endcomment %}
 
-      {%- for block in section.blocks -%}
+      {% comment %} {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when '@app' -%}
             {% render block %}
         {%- endcase -%}
-      {%- endfor -%}
+      {%- endfor -%} {% endcomment %}
 
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+      {% comment %} <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
           {% if cart == empty %}
             <span class="svg-wrapper">{{'icon-cart-empty.svg' | inline_asset_content }}</span>
           {% else %}
@@ -286,10 +313,11 @@
             <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
           </div>
         {%- endif -%}
-      </a>
+      </a> {% endcomment %}
+    </div>
     </div>
   </header>
-</{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
+</ {% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
 
 {%- if settings.cart_type == "notification" -%}
   {%- render 'cart-notification', color_scheme: section.settings.color_scheme, desktop_menu_type: section.settings.menu_type_desktop -%}

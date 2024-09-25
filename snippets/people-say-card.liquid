@@ -1,0 +1,23 @@
+{% assign avt_text = name | slice: 0, 1 | upcase | append: name | split: ' ' | last | slice: 0, 1 | upcase %}
+
+<div style="padding:4rem; background-color: #2a2a2a; width:30rem" class="card">
+    <div style="display: flex; ">
+        {% for i in (1..star-count) %}
+            <img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/Sub_Container.png?v=1726812633"/>
+        {% endfor %}
+        
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 2rem;">
+        <div style="font-family: Arial, Helvetica, sans-serif;  width: 6rem;  height: 6rem;  border-radius: 50%;   background: #fff;   font-size: 3.5rem;   color: #2a2a2a;  text-align: center;   line-height: 6rem;  margin: 2rem 0;">
+            {{avt_text}}
+        </div>
+        <div style="color: #fff;">
+            <div>{{name}}</div>
+            <div>{{addres}}</div>
+        </div>
+    </div>
+
+    <p style="color: #fff;">{{review-text}}</p>
+
+</div>

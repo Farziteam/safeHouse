@@ -39,6 +39,48 @@
                 "show_text_below": false
             }
         },
+        "demo-video":{
+            "type": "demo-video",
+            "settings": {
+                "video_url": "https://www.youtube.com/watch?v=dQw4w9W"
+            }
+        },
+        "try-free":{
+            "type": "try-free",
+            "settings": {
+                "img_url": "https://cdn.shopify.com/s/files/1/0719/6511/4625/files/Untitled.png?v=1726733821"
+            }
+        },
+        "need-safehouse":{
+            "type": "need-safehouse",
+            "settings": {
+
+            }
+        },
+        "people-say":{
+            "type": "people-say",
+            "settings": {
+
+            }
+        },
+        "proudly-featured":{
+            "type": "proudly-featured",
+            "settings": {
+
+            }
+        },
+        "support-guarante":{
+            "type": "support-guarante",
+            "settings": {
+
+            }
+        },
+        "try-safehouse":{
+            "type": "try-safehouse",
+            "settings": {
+
+            }
+        },
         "featured_collection": {
             "type": "featured-collection",
             "settings": {
@@ -70,6 +112,13 @@
     },
     "order": [
         "image_banner",
+        "demo-video",
+        "try-free",
+        "need-safehouse",
+        "people-say",
+        "proudly-featured",
+        "support-guarante",
+        "try-safehouse",
         "featured_collection"
     ]
 }
