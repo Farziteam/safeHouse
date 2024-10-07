@@ -1,9 +1,24 @@
 {% assign avt_text = name | slice: 0, 1 | upcase | append: name | split: ' ' | last | slice: 0, 1 | upcase %}
+<style>
+    .card-people{
+        padding:4rem; 
+        background-color: #2a2a2a; 
+        width:30rem;
 
-<div style="padding:4rem; background-color: #2a2a2a; width:30rem" class="card">
+    }
+
+    @media screen and (max-width: 768px) {
+        .card-people{
+            padding: 2rem;
+            width: 100%;
+        }
+    }
+</style>
+
+<div class="card-people">
     <div style="display: flex; ">
         {% for i in (1..star-count) %}
-            <img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/Sub_Container.png?v=1726812633"/>
+            <img height="auto" width="auto" src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/Sub_Container.png?v=1726812633"/>
         {% endfor %}
         
     </div>

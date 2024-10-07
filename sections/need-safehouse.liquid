@@ -6,21 +6,32 @@
     }
     .card-container{
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
         gap: 2rem;
         padding: 4rem 2rem;
         margin: 0rem 4rem;
 
     }
+
+    @media screen and (max-width: 768px) {
+        .card-container{
+            gap: 1rem;
+            padding: 1rem 1rem;
+            margin: 0rem 1rem;
+           
+        }
+    }
 </style>
 
 <div class="need-section">
     <h1>Why you need Safehouse?</h1>
     <div class="card-container">
-        {%  render 'need-safehouse-card'  bgColor: "#f8f4ff" icon: "https://cdn.shopify.com/s/files/1/0719/6511/4625/files/9beebadbb64cd9e935a214ca12acc72d68c3bc75-138x102.svg_fill.png?v=1726748667" title: "State of the art privacy" text: "We use the highest grade encryption on your traffic, coupled with IP masking to ensure you have complete anonymity online" %} 
-        {%  render 'need-safehouse-card'  bgColor: "#f8f4ff" icon: "https://cdn.shopify.com/s/files/1/0719/6511/4625/files/9beebadbb64cd9e935a214ca12acc72d68c3bc75-138x102.svg_fill.png?v=1726748667" title: "State of the art privacy" text: "We use the highest grade encryption on your traffic, coupled with IP masking to ensure you have complete anonymity online" %} 
-        {%  render 'need-safehouse-card'  bgColor: "#f8f4ff" icon: "https://cdn.shopify.com/s/files/1/0719/6511/4625/files/9beebadbb64cd9e935a214ca12acc72d68c3bc75-138x102.svg_fill.png?v=1726748667" title: "State of the art privacy" text: "We use the highest grade encryption on your traffic, coupled with IP masking to ensure you have complete anonymity online" %} 
-        {%  render 'need-safehouse-card'  bgColor: "#f8f4ff" icon: "https://cdn.shopify.com/s/files/1/0719/6511/4625/files/9beebadbb64cd9e935a214ca12acc72d68c3bc75-138x102.svg_fill.png?v=1726748667" title: "State of the art privacy" text: "We use the highest grade encryption on your traffic, coupled with IP masking to ensure you have complete anonymity online" %} 
+        {%  render 'need-safehouse-card'  bgColor: "#f9f9f9" icon: "https://cdn.shopify.com/s/files/1/0719/6511/4625/files/9beebadbb64cd9e935a214ca12acc72d68c3bc75-138x102.svg_fill.png?v=1726748667" title: "State of the art privacy" text: "We use the highest grade encryption on your traffic, coupled with IP masking to ensure you have complete anonymity online" %} 
+        {%  render 'need-safehouse-card'  bgColor: "#f9f9f9" icon: "https://cdn.shopify.com/s/files/1/0719/6511/4625/files/9beebadbb64cd9e935a214ca12acc72d68c3bc75-138x102.svg_fill.png?v=1726748667" title: "State of the art privacy" text: "We use the highest grade encryption on your traffic, coupled with IP masking to ensure you have complete anonymity online" %} 
+        {%  render 'need-safehouse-card'  bgColor: "#f9f9f9" icon: "https://cdn.shopify.com/s/files/1/0719/6511/4625/files/9beebadbb64cd9e935a214ca12acc72d68c3bc75-138x102.svg_fill.png?v=1726748667" title: "State of the art privacy" text: "We use the highest grade encryption on your traffic, coupled with IP masking to ensure you have complete anonymity online" %} 
+        {%  render 'need-safehouse-card'  bgColor: "#f9f9f9" icon: "https://cdn.shopify.com/s/files/1/0719/6511/4625/files/9beebadbb64cd9e935a214ca12acc72d68c3bc75-138x102.svg_fill.png?v=1726748667" title: "State of the art privacy" text: "We use the highest grade encryption on your traffic, coupled with IP masking to ensure you have complete anonymity online" %} 
     </div>
     
 </div>

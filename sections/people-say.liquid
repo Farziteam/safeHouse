@@ -88,10 +88,10 @@
         align-items: center;
         border-radius: 2rem;
     }
-    .swiper-slide {
+    .people-say-slide{
         width: 36rem;
     }
-    .swiper-container{
+    .people-say{
         width: 75vw;
         overflow: hidden;
         border-radius: 2rem;
@@ -101,6 +101,11 @@
         border-radius: 2rem;
     }
 
+    .people-say-head{
+        font-size: 3rem;
+        text-align: center;
+    }
+
     hr{
         margin: 2rem 0;
         border-color: #652fff;
@@ -108,7 +113,7 @@
         height: 2px;
     }
 
-    .swiper-pagination{
+    .people-say-pagination{
         position: relative;
         margin-top: 0.2rem;
         margin-bottom: 0.2rem;
@@ -127,38 +132,61 @@
     .swiper-button-next::after, .swiper-button-prev::after {
         content: "";
     }
+
+    @media screen and (max-width: 768px) {
+        .container{
+            padding: 1rem;
+        }
+
+        .google-reviews{
+            width: 100%;
+        }
+
+        .people-say{
+            width: 90vw;
+        }
+
+        .swiper-button-prev{
+            left: 80%;
+        }
+
+
+        .people-say-pagination{
+            left: -40%;
+        }
+    }
    
 </style>
 
 <div>
     <div class="container">
-        <h1>What 3.5M people in India have to say</h1>
+        <div class="people-say-head">What 3.5M people in India have to say</div>
         <div class="store-toggle">
             <button data-filter="google" class="store-btn active">Google Play</button>
             <button data-filter="apple" class="store-btn">App Store</button>
         </div>
-        <div class="reviews-container">
+        
             <div class="google-reviews">
 
-                <div class="swiper-container">
+                <div class="swiper-container people-say">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Andrew Huberman1" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Andrew Huberman2" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Andrew Huberman3" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman1" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman2" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman3" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
                     </div>
 
                     <!-- If we need pagination -->
                     <hr/>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-pagination people-say-pagination"></div>
 
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"><svg width="51" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -177,27 +205,27 @@
                 </div>
                 
             </div>
-        </div>
+       
             <div class="apple-reviews">
-                <div class="swiper-container">
+                <div class="swiper-container people-say">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Rishabh Pant1" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Rishabh Pant2" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Rishabh Pant3" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Rishabh Pant4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Rishabh Pant5" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Rishabh Pant6" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Rishabh Pant7" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Rishabh Pant8" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Rishabh Pant9" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide">{%  render 'people-say-card' name:"Rishabh Pant10" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant1" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant2" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant3" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant5" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant6" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant7" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant8" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant9" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant10" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
                     </div>
 
                     <!-- If we need pagination -->
                     <hr/>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-pagination people-say-pagination"></div>
 
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"><svg width="51" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -226,12 +254,12 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const swiper = new Swiper('.swiper-container', {
+        const swiper = new Swiper('.people-say', {
             direction: 'horizontal',
             loop: false,
             slidesPerView: 'auto',
             pagination: {
-                el: '.swiper-pagination',
+                el: '.people-say-pagination',
                 type: "fraction",
                 renderFraction: function (currentClass, totalClass) {
                     return '<span class="' + currentClass + '"></span>' +

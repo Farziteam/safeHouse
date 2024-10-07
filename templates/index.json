@@ -81,6 +81,12 @@
 
             }
         },
+        "safehouse-footer":{
+            "type": "safehouse-footer",
+            "settings": {
+
+            }
+        },
         "featured_collection": {
             "type": "featured-collection",
             "settings": {
@@ -119,6 +125,7 @@
         "proudly-featured",
         "support-guarante",
         "try-safehouse",
+        "safehouse-footer",
         "featured_collection"
     ]
 }

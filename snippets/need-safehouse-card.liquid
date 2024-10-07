@@ -1,19 +1,47 @@
-{% comment %} <style>
+<style>
 .need-card{
-    border: 2px solid black;
-    width: 17rem;
-    height: 20rem;
-    padding: 4rem;
+    background-color: {{bgColor}}; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 2rem;
+    width: 23%;
 }
-</style> {% endcomment %}
 
-<div style="background-color: {{bgColor}}; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem" class="need-card">
 
-    <div class="width:14rem;">
-        <img src={{icon}}/>
-    </div>
+
+@media screen and (max-width: 768px) {
+    .need-card{
+        width: 48%;
+        height: 22rem;
+        padding: 1rem;
+    }
+    .need-card-icon{
+        width: 5rem;
+    }
+
+    .need-card-head{
+        margin: 0px;
+        font-size: 2rem;
+    }
+
+    .need-card-text{
+        font-size: 1rem;
+    }
+
+
+    
+}
+</style> 
+
+<div class="need-card">
+
+    
+    <img class="need-card-icon" src={{icon}}/>
+   
     <div>
-        <h3>{{title}}</h3>
-        <p>{{text}}</p>
+        <h3 class="need-card-head" >{{title}}</h3>
+        <p class="need-card-text">{{text}}</p>
     </div>
 </div>
