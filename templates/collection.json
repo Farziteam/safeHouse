@@ -28,64 +28,64 @@
     //     "padding_bottom": 36
     //   }
     // }
-    "product-hero":{
-        "type": "product-hero",
-        "settings": {
+        "product-hero":{
+            "type": "product-hero",
+            "settings": {
 
-        }
-    },
-    "product-membership":{
-        "type": "product-membership",
-        "settings": {
+            }
+        },
+        "product-membership":{
+            "type": "product-membership",
+            "settings": {
 
-        }
-    },
-    "pdp-features":{
-        "type": "pdp-features",
-        "settings": {
+            }
+        },
+        "pdp-features":{
+            "type": "pdp-features",
+            "settings": {
 
-        }
-    },
-    "proudly-featured":{
-        "type": "proudly-featured",
-        "settings": {
+            }
+        },
+        "proudly-featured":{
+            "type": "proudly-featured",
+            "settings": {
 
-        }
-    },
-    "people-say":{
-        "type": "people-say",
-        "settings": {
+            }
+        },
+        "people-say":{
+            "type": "people-say",
+            "settings": {
 
-        }
-    },
-    "need-safehouse":{
-        "type": "need-safehouse",
-        "settings": {
+            }
+        },
+        "need-safehouse":{
+            "type": "need-safehouse",
+            "settings": {
 
-        }
-    },
-    "money-back":{
-        "type": "money-back",
-        "settings": {
+            }
+        },
+        "money-back":{
+            "type": "money-back",
+            "settings": {
 
-        }
-    },
-    "need-help":{
-        "type": "need-help",
-        "settings": {
+            }
+        },
+        "need-help":{
+            "type": "need-help",
+            "settings": {
 
-        }
-    },
+            }
+        },
    
-},
-"order": [
-    "product-hero",
-    "product-membership",
-    "pdp-features",
-    "proudly-featured",
-    "people-say",
-    "need-safehouse",
-    "money-back",
-    "need-help",
-]
+    },
+    "order": [
+        "product-hero",
+        "product-membership",
+        "pdp-features",
+        "proudly-featured",
+        "people-say",
+        "need-safehouse",
+        "money-back",
+        "need-help",
+    ]
 }
