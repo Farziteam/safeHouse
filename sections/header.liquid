@@ -110,7 +110,6 @@
 {%- style -%}
   .header-wrapper .header {
     padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 1 }}px 3rem;
-    border: 2px solid #d9d9d9;
     border-radius: 2rem;
     font-family: Inter;
     font-weight: 400;
@@ -199,7 +198,7 @@
             {% comment %} {%- else -%}
               <span class="h2">{{ shop.name }}</span> {% endcomment %}
             {%- endif -%}
-            <span class="h1">{{ logo_title }}</span>
+            {% comment %} <span class="h1">{{ logo_title }}</span> {% endcomment %}
           </a>
       {%- if request.page_type == 'index' -%}
         </h1>
