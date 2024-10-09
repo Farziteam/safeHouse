@@ -88,6 +88,11 @@
     display: flex;
   }
 
+  @media screen and (max-width: 768px){
+    .des-logo{
+      display: none;
+    }
+  }
   @media screen and (min-width: 750px) {
     .list-menu__item--link {
       padding-bottom: 0.5rem;
@@ -177,9 +182,9 @@
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
       {%- endif -%}
-          <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+           <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
             {%- if settings.logo != blank -%}
-              <div class="header__heading-logo-wrapper">
+              <div class="header__heading-logo-wrapper des-logo">
                 {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
                 {%- assign logo_title = settings.logo_title | default: shop.name | escape -%}
                 {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
@@ -199,6 +204,7 @@
               <span class="h2">{{ shop.name }}</span> {% endcomment %}
             {%- endif -%}
             {% comment %} <span class="h1">{{ logo_title }}</span> {% endcomment %}
+          
           </a>
       {%- if request.page_type == 'index' -%}
         </h1>

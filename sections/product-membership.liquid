@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <style>
        .product-membership{
             padding: 12rem 2rem;
@@ -11,6 +10,8 @@
 
         .pricing-container {
             display: flex;
+            justify-content: center;
+            align-items: center;
             gap: 20px;
             width: 100%;
         }
@@ -21,11 +22,12 @@
             box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.1);
             text-align: center;
             position: relative;
-            width: 33%;
+            width: 30%;
+            margin: 0.5%;
         }
          .member-card:hover{
             transform: scale(1.1);
-            border-color: #6200ea;
+            border: 0.5rem solid #652fff;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
          }
 
@@ -77,7 +79,7 @@
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
             font-size: 14px;
-            width: 100%;
+            width: 102.4%;
             height: 5rem;
             text-align: left;
             display: none;
@@ -115,8 +117,9 @@
         }
 
         .subtitle {
-            font-size: 14px;
-            color: #777;
+            font-size: 1rem;
+            line-height: 2rem;
+            color: #B1B1B1;
             margin-bottom: 15px;
             text-align: center;
         }
@@ -179,6 +182,8 @@
         }
 
         .member-card-section{
+            display: grid;
+            grid-template-columns: 1fr;
             padding-top: 2rem;
             min-height: 19rem;
             border-radius: 1rem;
@@ -220,6 +225,9 @@
         }
 
         @media screen and (max-width: 768px){
+            .product-membership{
+                padding: 4rem 2rem;    
+            }
             .pricing-container{
                 flex-direction: column;
             }
@@ -238,7 +246,7 @@
             .pdp-membership-footer{
                 margin: 1px;
                 width: 90%;
-                top: 100%;
+                top: 102%;
                 padding: 0.5rem;
                 left: 5%;
                 text-align: left;
@@ -263,6 +271,10 @@
                 display: flex;
             }
 
+            .badge{
+                width: 103%;
+            }
+
             .expand-button{
                 display: flex;
                 justify-content: center;
@@ -270,6 +282,10 @@
                 position: absolute;
                 top: 80%;
                 left: 85%;
+            }
+
+            .subtitle{
+                margin: 0px;
             }
            
         } 
@@ -312,7 +328,7 @@
                 <div class="memberrship-price">
                     <del>₹204</del> ₹84/month
                 </div>
-                <p class="subtitle">for 12 months + 3 months</p>
+                <p class="subtitle">for 12 months +  Rs 25000 Cyber Insurance</p>
             </div>
             <div class="expand-button" id="arrow-2" onclick="toggleCard(2)"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.7688 0.6705C13.1579 0.957076 13.2411 1.50482 12.9545 1.89393C12.7319 2.19616 12.5092 2.48346 12.314 2.73368C11.9241 3.23319 11.3875 3.90215 10.8044 4.57368C10.2251 5.24086 9.58287 5.93059 8.98324 6.4604C8.68443 6.72442 8.3756 6.96723 8.07445 7.14878C7.79732 7.31584 7.41652 7.5 6.99991 7.5C6.5833 7.5 6.20247 7.31584 5.92534 7.14878C5.62419 6.96723 5.31536 6.72442 5.01655 6.4604C4.41692 5.93059 3.77464 5.24086 3.19535 4.57368C2.6123 3.90215 2.07564 3.23319 1.68581 2.73368C1.49054 2.48346 1.2679 2.19616 1.0453 1.89393C0.758728 1.50483 0.841846 0.957077 1.23095 0.670501C1.38737 0.555303 1.56942 0.499853 1.74984 0.500004L6.9999 0.500004L12.2499 0.500003C12.4304 0.499852 12.6124 0.555302 12.7688 0.6705Z" fill="#14181F"/>
@@ -419,372 +435,3 @@
             });
         }
     });
-=======
-<style>
-       .product-membership{
-            padding: 12rem 4rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #f9fafb;
-       }
-
-        .pricing-container {
-            display: flex;
-            gap: 20px;
-            width: 100%;
-        }
-
-        .member-card {
-            background-color: transparent;
-            border-radius: 10px;
-            box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.1);
-            text-align: center;
-            position: relative;
-            width: 33%;
-        }
-
-        .member-card.featured {
-            border: 3px solid #652fff;
-            transform: scale(1.1);
-            width: 32%;
-            margin: 4rem 0.5rem;
-        }
-
-        .member-card h2{
-            font-size: 2rem;
-            font-weight: 600;
-            text-align: center;
-            margin: 0px;
-            margin-top: 1rem;
-        }
-
-        .member-card.featured>div>h2{
-            
-            font-weight: 800;
-        }
-
-        .badge {
-            position: absolute;
-            top: -4.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #652fff;
-            color: white;
-            padding: 1.5rem 1rem;
-            border-radius: 0px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            font-size: 14px;
-            width: 101.7%;
-            height: 5rem;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            gap:0.5rem;
-        }
-
-        .discount-badge {
-            position: absolute;
-            top: -5.5rem;
-            right: 1rem;
-            color: white;
-           
-            font-size: 16px;
-            border-radius: 5px;
-            font-weight: bold;
-            
-        }
-
-        .memberrship-price {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #333;
-            margin: 10px 0;
-            text-align: center;
-        }
-
-       
-
-        .memberrship-price.featured-memberrship-price{
-            font-size: 5rem;
-            margin: 0px;
-        }
-
-
-        .memberrship-price del {
-            color: #999;
-            font-size: 18px;
-        }
-
-        .subtitle {
-            font-size: 14px;
-            color: #777;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .features {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-        }
-
-        .features li {
-            color: #333;
-            font-size: 14px;
-            margin: 10px 0;
-        }
-
-        .features li::before {
-            content: '✔';
-            margin-right: 8px;
-            color: #652fff;
-        }
-
-        .cta {
-            background-color: #f7f4ff;
-            color: #3D66FB;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #3d66fb;
-            text-decoration: none;
-            text-align: center;
-            display: inline-block;
-            margin-top: 20px;
-            font-size: 18px;
-            font-weight: 500;
-            width: 100%;
-        }
-
-        .cta.cta-featured{
-            background-color: #652fff;
-            color: #ffffff;
-        }
-
-        .pdp-membership-footer {
-            position: absolute;
-            top: 104%;
-            left: -50%;
-            background-color: #f4f6f9;
-            padding: 0.5rem 1rem;
-            border-radius: 10px;
-            margin-top: 30px;
-            font-size: 14px;
-            color: #777;
-            width: 230%;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 2rem;
-            background-color: #f7f4ff'
-        }
-
-        .pdp-membership-footer p{
-            margin: 0px;
-        }
-
-        .member-card-section{
-            padding-top: 2rem;
-            border-radius: 1rem;
-            background-color: #ffffff;
-        }
-
-        .member-card-section2{
-            padding: 2rem 3rem;
-        }
-        .stickers{
-            background-color: #f7f4ff;
-            display: flex;
-            justify-content: flex-end;
-            padding: 0.5rem;
-            border-bottom-left-radius: 1rem;
-            border-bottom-right-radius: 1rem;
-            height: 3rem;
-        }
-
-        .member-card .stickers{
-            display: none;
-        }
-        .member-card.featured .stickers{
-            display: flex;
-            gap: 1rem;
-        }
-        .expand-button{
-            background-color: #d9d9d9;
-            padding: 1rem;
-            border-radius: 50%;
-            width: 3rem;
-            height: 3rem;
-            display: none;
-           
-        }
-
-        @media screen and (max-width: 768px){
-            .pricing-container{
-                flex-direction: column;
-            }
-
-            .member-card{
-                width: 98%;
-                height: 80%;
-                border: 1px solid #e5e5e5;
-            }
-            .member-card.featured{
-                width: 98%;
-                margin: 12rem 0rem;
-            }
-            .pdp-membership-footer{
-                
-                width: 90%;
-                top: 102%;
-                padding: 0.5rem;
-                left: 5%;
-                text-align: left;
-                font-size: 10px;
-            }
-
-            
-            .member-card-section2{
-                display: none;
-            }
-
-            .stickers{
-                justify-content: flex-start;
-            }
-
-            .member-card .stickers{
-                display: flex;
-            }
-
-            .expand-button{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                top:15rem;
-                left: 85%;
-            }
-           
-        } 
-
-    </style>
-<section class="product-membership">
-    <div class="pricing-container">
-        <div class="member-card">
-            <div class="member-card-section">
-                <h2>Basic</h2>
-                <div class="memberrship-price">₹119/month</div>
-                <p class="subtitle">for 1 month</p>
-            </div>
-            <div class="expand-button" id="arrow-1" onclick="toggleCard(1)">▶</div>
-            <div class="member-card-section2" id="section-1">
-                <ul class="features">
-                    <li>30 day money-back</li>
-                </ul>
-                <a href="#" class="cta">Get started</a>
-            </div>
-            <div class="stickers">
-                <div></div>
-            </div>
-        </div>
-
-        <div class="member-card featured">
-            <div class="badge"><span> <img  width="" height="" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/Vector_2.png?v=1727426174"/></span> Discount Applied:<span style="font-weight: 700;"> SPECIALDEAL</span></div>
-            <img width="" height="" class="discount-badge" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/Frame_96.png?v=1727357457"/>
-            <div class="member-card-section">
-                <h2>Essential</h2>
-                <div class="memberrship-price featured-memberrship-price">
-                    <del>₹204</del> ₹84/month
-                </div>
-                <p class="subtitle">for 12 months + 3 months</p>
-            </div>
-            <div class="expand-button" id="arrow-2" onclick="toggleCard(2)">▶</div>
-            <div class="member-card-section2" id="section-2">
-                <ul class="features">
-                    <li>₹25,000 CYBER INSURANCE</li>
-                    <li>30 day money-back</li>
-                </ul>
-                <a href="#" class="cta cta-featured">Get started</a>
-            </div>
-            <div class="stickers">
-                <img width="22rem" height="22rem" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/image_4.png?v=1727423085"/>
-                <img width="22rem" height="22rem" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/image_5.png?v=1727423085"/>
-            </div>
-            <div class="pdp-membership-footer">
-                <img width="" height="" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/Avatar.png?v=1727416484"/>
-                <p>Great choice! This plan offers the biggest savings and is fully refundable for 30 days.</p>
-            
-             </div>
-        </div>
-
-        <div class="member-card">
-            <div class="member-card-section">
-                <h2>Premium</h2>
-                <div class="memberrship-price">₹74/month</div>
-                <p class="subtitle">for 6 months</p>
-            </div>
-            <div class="expand-button" id="arrow-3" onclick="toggleCard(3)">▶</div>
-            <div class="member-card-section2" id="section-3">
-                <ul class="features">
-                    <li>30 day money-back</li>
-                </ul>
-                <a href="#" class="cta">Get started</a>
-            </div>
-            <div class="stickers">
-                <div></div>
-            </div>
-        </div>
-    </div>
-
-    
-
-</section>
-
-<script>
-    function toggleCard(cardIndex) {
-        const section = document.getElementById(`section-${cardIndex}`);
-        const arrowButton = document.getElementById(`arrow-${cardIndex}`);
-
-        // Check if the section is currently displayed
-        if (section.style.display === "block") {
-            // Hide the section
-            section.style.display = "none";
-            arrowButton.textContent = "▼"; // Change arrow to down
-        } else {
-            // Hide all sections
-            document.querySelectorAll(".member-card-section2").forEach((sec) => {
-            sec.style.display = "none";
-            });
-
-            // Set all arrow buttons back to ▼
-            document.querySelectorAll(".expand-button").forEach((btn) => {
-             btn.textContent = "▼";
-            });
-
-            // Display the clicked member-card section
-            section.style.display = "block";
-            arrowButton.textContent = "▶"; // Change arrow to up
-        }
-    }
-
-    window.addEventListener("resize", function () {
-        // Check if the screen width is greater than 768px (desktop view)
-        if (window.innerWidth > 768) {
-            document.querySelectorAll(".member-card-section2").forEach((sec) => {
-            sec.style.display = "block"; // Show all sections on larger screens
-            });
-
-            // Reset all arrow buttons to ▼ since no toggle is needed on large screens
-            document.querySelectorAll(".expand-button").forEach((btn) => {
-            btn.textContent = "▼";
-            });
-        } else {
-            // Hide all sections on mobile view (initial state)
-            document.querySelectorAll(".member-card-section2").forEach((sec) => {
-            sec.style.display = "none";
-            });
-        }
-    });
->>>>>>> b089e062de9a70102889c62205ed2ac481ebdc08
-</script>

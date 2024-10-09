@@ -51,8 +51,8 @@
     }
     .store-toggle{
         background-color: #d9ccff;
-        padding: 2rem;
-        border-radius: 2rem;
+        padding: 1rem;
+        border-radius: 3rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -60,7 +60,7 @@
         margin-bottom: 2rem;
     }
     .store-btn{
-        padding: 1rem 3rem;
+        padding: 1rem 2rem;
         margin-right: 1rem;
         cursor: pointer;
         background-color: #d9ccff;
@@ -68,6 +68,10 @@
         border-radius: 5px;
         transition: background-color 0.3s;
         border-radius: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
         
     }
 
@@ -76,6 +80,7 @@
         background-color: #652fff;
         color: white;
     }
+    
     .google-reviews{
         display: flex;
         justify-content: space-between;
@@ -89,7 +94,7 @@
         border-radius: 2rem;
     }
     .people-say-slide{
-        width: 36rem;
+        width: 33.3%;
     }
     .people-say{
         width: 75vw;
@@ -102,6 +107,8 @@
     }
 
     .people-say-head{
+        padding: 4rem;
+        font-weight: 600;
         font-size: 3rem;
         text-align: center;
     }
@@ -143,14 +150,17 @@
         }
 
         .people-say{
-            width: 90vw;
+            width: 95vw;
         }
 
         .swiper-button-prev{
             left: 80%;
         }
 
-
+        .people-say-slide{
+            width: 98%;
+            margin-right: 7%;
+        }
         .people-say-pagination{
             left: -40%;
         }
@@ -162,8 +172,34 @@
     <div class="container">
         <div class="people-say-head">What 3.5M people in India have to say</div>
         <div class="store-toggle">
-            <button data-filter="google" class="store-btn active">Google Play</button>
-            <button data-filter="apple" class="store-btn">App Store</button>
+            <button data-filter="google" class="store-btn active">
+                <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.400503 1.21378C0.148238 1.48079 0 1.89429 0 2.4309V21.5874C0 22.124 0.148238 22.5375 0.400503 22.8045L0.464653 22.8669L11.1959 12.1357V11.8826L0.464653 1.15137L0.400503 1.21378Z" fill="white"/>
+                    <mask id="mask0_521_3814" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="11" y="8" width="9" height="8">
+                    <path d="M14.7712 15.715L11.1953 12.1364V11.8833L14.773 8.30566L19.0918 10.759C20.302 11.4473 20.302 12.5725 19.0918 13.2599L14.8536 15.6682L14.7712 15.715Z" fill="white"/>
+                    </mask>
+                    <g mask="url(#mask0_521_3814)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7712 15.715L12.1953 12.1364V11.8833L15.773 8.30566L20.0918 10.759C21.302 11.4473 21.302 12.5725 20.0918 13.2599L15.8536 15.6682L15.7712 15.715Z" fill="white"/>
+                    </g>
+                    <mask id="mask1_521_3814" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="12" width="15" height="12">
+                    <path d="M14.854 15.668L11.1958 12.0098L0.400391 22.8051C0.800027 23.2273 1.45886 23.2793 2.20092 22.858L14.854 15.668Z" fill="white"/>
+                    </mask>
+                    <g mask="url(#mask1_521_3814)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.854 15.668L12.1958 12.0098L1.40039 22.8051C1.80003 23.2273 2.45886 23.2793 3.20092 22.858L15.854 15.668Z" fill="white"/>
+                    </g>
+                    <mask id="mask2_521_3814" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="15" height="13">
+                    <path d="M14.854 8.35118L2.20092 1.1612C1.45886 0.739895 0.800027 0.791908 0.400391 1.21408L11.1958 12.0095L14.854 8.35118Z" fill="white"/>
+                    </mask>
+                    <g mask="url(#mask2_521_3814)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.854 8.35118L3.20092 1.1612C2.45886 0.739895 1.80003 0.791908 1.40039 1.21408L12.1958 12.0095L15.854 8.35118Z" fill="white"/>
+                    </g>
+                </svg>
+                Google Play
+            </button>
+            <button data-filter="apple" class="store-btn">
+                <img width="auto" height="auto" src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/Logo_1.png?v=1727327140"/>
+                App Store
+            </button>
         </div>
         
             <div class="google-reviews">
@@ -268,10 +304,10 @@
                 }
             },
             spaceBetween: 0,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
+            // autoplay: {
+            //     delay: 3000,
+            //     disableOnInteraction: false,
+            // },
             lazy: true,
             navigation: {
                 nextEl: '.swiper-button-next',

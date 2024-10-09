@@ -6,6 +6,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 5rem;
 }
 
 .Marquee_announcement_bar {
@@ -27,8 +30,31 @@
   animation: Marquee_announcement_bar 20s linear infinite;
 }
 
+.proudly-featured-castor{
+  position: absolute;
+  bottom: 50%;
+  z-index: -1;
+}
 
 @media (min-width: 0px) and (max-width: 768px) {
+  .proudly-featured-castor{
+    bottom: 70%;
+    left: -38%;
+    height: 32%;
+    
+  }
+
+  .proudly-feature h1{
+    position: relative;
+    z-index: 34;
+    font-weight: 600;
+  }
+  .proudly-feature p{
+    font-weight: 700;
+    color: #828282;
+    font-size: 1.5rem;
+    ;
+  }
   .Marquee_content_announcement_bar {
     display: flex;
     animation: Marquee_announcement_bar 30s linear infinite;
@@ -73,35 +99,38 @@
 </style>
 
 <div class="proudly-feature">
-    <h1>Proudly Featured in</h1>
-    <p>TOP BUSINESS ARTICLES</p>
+  <img class="proudly-featured-castor" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/ASTOR_2.png?v=1728451454"/>
+  <h1>Proudly Featured in</h1>
+  <p>TOP BUSINESS ARTICLES</p>
+  <div class="Marquee_content_announcement_bar">
+  
     <div class="Marquee_announcement_bar">
-    <div class="Marquee_content_announcement_bar">
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_5.png?v=1727153853"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_7.png?v=1727153852"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_8.png?v=1727153853"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_4.png?v=1727153852"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
-        
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_5.png?v=1727153853"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_7.png?v=1727153852"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_4.png?v=1727153852"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
-        <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div> 
+      <div class="Marquee_content_announcement_bar">
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_5.png?v=1727153853"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_7.png?v=1727153852"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_8.png?v=1727153853"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_4.png?v=1727153852"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
+          
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_5.png?v=1727153853"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_7.png?v=1727153852"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_4.png?v=1727153852"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div>
+          <div class="Marquee_tag_announcement_bar"><img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/image_3.png?v=1727069382"/></div> 
+      </div>
     </div>
-    </div>
-
+  </div>
 </div>
