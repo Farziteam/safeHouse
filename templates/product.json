@@ -149,10 +149,17 @@
 
             }
         },
+        "social-media":{
+            "type":"social-media",
+            "settings": {
+
+            }
+        },
        
     },
     "order": [
         "product-hero",
+        "social-media",
         "product-membership",
         "pdp-features",
         "proudly-featured",
