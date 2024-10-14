@@ -1,13 +1,14 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
+<<<<<<< HEAD
     "sections": {
         // "main": {
         //     "type": "main-product",
@@ -169,3 +170,65 @@
         "need-help",
     ]
 }
+=======
+  "sections": {
+    "product-hero": {
+      "type": "product-hero",
+      "settings": {
+        "banner_image": "shopify://shop_images/image_1.png"
+      }
+    },
+    "social-media": {
+      "type": "social-media",
+      "settings": {
+      }
+    },
+    "product-membership": {
+      "type": "product-membership",
+      "settings": {
+      }
+    },
+    "pdp-features": {
+      "type": "pdp-features",
+      "settings": {
+      }
+    },
+    "proudly-featured": {
+      "type": "proudly-featured",
+      "settings": {
+      }
+    },
+    "people-say": {
+      "type": "people-say",
+      "settings": {
+      }
+    },
+    "need-safehouse": {
+      "type": "need-safehouse",
+      "settings": {
+      }
+    },
+    "money-back": {
+      "type": "money-back",
+      "settings": {
+      }
+    },
+    "need-help": {
+      "type": "need-help",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "product-hero",
+    "social-media",
+    "product-membership",
+    "pdp-features",
+    "proudly-featured",
+    "people-say",
+    "need-safehouse",
+    "money-back",
+    "need-help"
+  ]
+}
+>>>>>>> dd3963441e2583e2a3b427651ba38a0b0f54584d
