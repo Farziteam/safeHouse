@@ -428,12 +428,18 @@ table:not([class]) th {
 }
 
 @media screen and (max-width: 749px) {
+  .smhide.small-hide.medium-hide{
+    display: block !important;
+  }
   .small-hide {
     display: none !important;
   }
 }
 
 @media screen and (min-width: 750px) and (max-width: 989px) {
+  .smhide.small-hide.medium-hide{
+    display: block !important;
+  }
   .medium-hide {
     display: none !important;
   }

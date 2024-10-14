@@ -3,6 +3,12 @@
     "product-hero": {
       "type": "product-hero",
       "settings": {
+        "banner_image": "shopify:\/\/shop_images\/image_1.png"
+      }
+    },
+    "huntary": {
+      "type": "huntary",
+      "settings": {
       }
     },
     "product-membership": {
@@ -20,11 +26,6 @@
       "settings": {
       }
     },
-    // "people-say": {
-    //   "type": "people-say",
-    //   "settings": {
-    //   }
-    // },
     "need-safehouse": {
       "type": "need-safehouse",
       "settings": {
@@ -39,13 +40,7 @@
       "type": "need-help",
       "settings": {
       }
-    },
-    "huntary":{
-      "type":"huntary",
-      "settings": {
-
-      }
-  },
+    }
   },
   "order": [
     "product-hero",
@@ -53,7 +48,6 @@
     "product-membership",
     "pdp-features",
     "proudly-featured",
-    // "people-say",
     "need-safehouse",
     "money-back",
     "need-help"
