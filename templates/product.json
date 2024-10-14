@@ -149,8 +149,8 @@
 
             }
         },
-        "social-media":{
-            "type":"social-media",
+        "huntary":{
+            "type":"huntary",
             "settings": {
 
             }
@@ -159,7 +159,7 @@
     },
     "order": [
         "product-hero",
-        "social-media",
+        "huntary",
         "product-membership",
         "pdp-features",
         "proudly-featured",

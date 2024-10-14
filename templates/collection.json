@@ -20,11 +20,11 @@
       "settings": {
       }
     },
-    "people-say": {
-      "type": "people-say",
-      "settings": {
-      }
-    },
+    // "people-say": {
+    //   "type": "people-say",
+    //   "settings": {
+    //   }
+    // },
     "need-safehouse": {
       "type": "need-safehouse",
       "settings": {
@@ -39,14 +39,21 @@
       "type": "need-help",
       "settings": {
       }
-    }
+    },
+    "huntary":{
+      "type":"huntary",
+      "settings": {
+
+      }
+  },
   },
   "order": [
     "product-hero",
+    "huntary",
     "product-membership",
     "pdp-features",
     "proudly-featured",
-    "people-say",
+    // "people-say",
     "need-safehouse",
     "money-back",
     "need-help"

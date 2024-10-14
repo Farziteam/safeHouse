@@ -11,6 +11,8 @@
         height: 100%;
         background-size: cover;
         display: flex;
+        flex-direction: column;
+        gap: 8rem;
         justify-content: flex-start;
         align-items: center;
         color: white;
@@ -18,6 +20,7 @@
         background-image: url(https://cdn.shopify.com/s/files/1/0006/5418/0388/files/image_2.png?v=1727354647);
         background-position: center;
         padding: 0px 4rem;
+        border-radius: 2rem
     }
 
     .pdp-slide-card::before {
@@ -57,6 +60,7 @@
         color: white; 
         font-size:5rem; 
         font-weight:600;
+        
     }
     .mobile-mock{
        
@@ -64,7 +68,7 @@
         bottom: -20.35%;
     }
 
-    .pdp-feature-bullet{
+    .swiper-pagination-bullet.pdp-feature-bullet{
       width: 2.5rem !important;
       height: 0.5rem !important;
       text-align: center;
@@ -73,13 +77,13 @@
       color: #000;
       opacity: 1;
       background: rgba(0, 0, 0, 0.2) !important;
-      border-radius: 2rem;
+      border-radius: 2rem !important;
     }
 
-    .pdp-feature-bullet-active {
+    .swiper-pagination-bullet-active.pdp-feature-bullet {
       color: #fff !important;
       background: #652fff !important;
-      width: 5rem;
+      width: 5rem !important;
     }
 
     .pdp-feature-get-btn{
@@ -87,18 +91,18 @@
     }
     @media screen and (max-width: 768px) {
         .pdp-feature-container{
-            padding: 1rem 2rem;
+            padding: 4rem 1.5rem;
         }
-        .slider-card{
+        .pdp-slide-card{
             background-image: url(https://cdn.shopify.com/s/files/1/0006/5418/0388/files/image_6.png?v=1727698137);
         }
-        .slider-card{
+        .pdp-slide-card{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            padding: 0rem 1rem;
-            padding-top: 1rem;
+            padding: 0rem 2rem;
+            padding-top: 1.5rem;
             width: auto;
         }
 
@@ -106,6 +110,8 @@
             color: white; 
             font-size:3rem; 
             font-weight:400;
+            line-height: 4rem;
+            padding-right: 6rem;
         }
         .mobile-mock{
             width: 89% ;
@@ -113,7 +119,19 @@
         }
 
         .pdp-feature-get-btn{
-            width: 37%;
+            width: 35%;
+            padding: 0.5rem 1.5rem;
+            gap: 0.5rem;
+        }
+
+        .feature-head{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .pdp-feature-wrapper{
+            width: 100%;
         }
     }
 
@@ -122,7 +140,7 @@
 
     <div class="swiper-container pdp-feature-swiper">
         <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper pdp-feature-wrapper">
             <!-- Slides -->
                 <div class="swiper-slide pdp-slide">
                     <div class="slider-card pdp-slide-card">
@@ -184,23 +202,23 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const swiper = new Swiper('.pdp-feature-swiper', {
+        const swiper = new Swiper('.swiper-container.pdp-feature-swiper', {
             direction: 'horizontal',
             loop: false,
             slidesPerView: 'auto',
             pagination: {
-                el: '.pdp-feature-pagination',
+                el: '.swiper-pagination.pdp-feature-pagination',
                 clickable: true,
                 renderBullet: function (index, className) {
-                    return '<span class= pdp-feature-bullet "' + className + '">'  + "</span>";
+                    return `<span class=" ${className} pdp-feature-bullet "> </span>`;
                 },
                 
             },
             spaceBetween: 0,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
+            // autoplay: {
+            //     delay: 3000,
+            //     disableOnInteraction: false,
+            // },
             lazy: true,
            
         });
