@@ -432,7 +432,7 @@ table:not([class]) th {
     display: block !important;
   }
   .small-hide {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -441,7 +441,7 @@ table:not([class]) th {
     display: block !important;
   }
   .medium-hide {
-    display: none !important;
+    display: none;
   }
 }
 
