@@ -2,6 +2,7 @@
   .hero-section {
     position: relative;
     width: 100%;
+    min-height: min-content;
     height: 100vh;
     background-size: cover;
     display: flex;
@@ -9,6 +10,7 @@
     align-items: center;
     color: white;
     text-align: left;
+    overflow: hidden;
   }
 
   .hero-section::before {
@@ -123,7 +125,11 @@
 
       
     }
-
+    .hero-astor{
+      display: none;
+      width: 110%;
+      
+    }
     
 
 
@@ -171,6 +177,12 @@
       font-size: 0.8rem;
       gap: 0.8rem;
     }
+
+    .hero-astor{
+      display: block;
+      position: absolute;
+      top: 12%;
+    }
   }
 
   @media screen and (max-width: 480px) {
@@ -189,6 +201,7 @@
 </style>
 
 <div class="hero-section" style="background-image: url({{ section.settings.banner_image |  image_url  }})">
+    <img class="hero-astor" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/Item_cta-line-svg-1_webp.png?v=1728972004"/>
     <div class="hero-content">
       <h1 class="banner-head-text">More than "just a VPN"</h1>
       <p class="banner-subhead">VPN, protection, and cyber insurance</p>
