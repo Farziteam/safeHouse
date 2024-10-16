@@ -11,6 +11,7 @@
     color: white;
     text-align: left;
     overflow: hidden;
+    background-image: url({{ section.settings.desktop_image |  image_url  }})
   }
 
   .hero-section::before {
@@ -31,8 +32,9 @@
   }
 
   .hero-content h1 {
-    font-size: 48px;
-    font-weight: 700;
+    font-size: 5.5rem;
+    font-weight: 400;
+    letter-spacing: 0.15rem;
     margin-bottom: 20px;
     color: white;
   }
@@ -72,22 +74,6 @@
       font-size: 1.5rem;
       font-weight: 400;
       line-height: 3rem;
-    }
-    .get-button{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding:  1rem 2rem;
-      border-radius: 10px;
-      min-width: min-content;
-      background-color: #652fff;
-      color: #FFFFFF;
-      text-decoration: none;
-      font-family: Inter;
-      font-weight: 400;
-      font-size: 1.5rem;
-      /* width: ; */
     }
   .banner-head-text {
     font-family: Tomato Grotesk;
@@ -160,7 +146,7 @@
     gap: 1rem;
     background-color: #F7F4FF;
     color: #212636;
-    font-size: x-small;
+    font-size: 1.3rem;
     padding: 8px 2.5rem;
 
 
@@ -176,20 +162,24 @@
   @media screen and (max-width: 768px) {
     .hero-section {
       background-position: center;
-      height: 80%;
+      height: 60vh;
       justify-content: center;
+      background-image: url({{ section.settings.mobile_image |  image_url  }})
     }
     .hero-content {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
-      padding: 2rem;
+      padding: 2rem 0rem;
       height: 61vh;
+      width: 100%;
     }
 
-    .get-button {
-      width: 61%;
+    .get-button.hero-get-btn {
+      width: 68%;
+      padding: 1rem 1.5rem;
+      gap: 0.5rem;
     }
     .social-media {
       margin-top: 0;
@@ -197,10 +187,12 @@
     }
     .hero-content h1 {
       font-size: 36px;
+      margin-bottom: 0px;
     }
 
     .hero-content p {
       font-size: 16px;
+      margin-bottom: 0px;
     }
     .btn-section {
       flex-direction: column;
@@ -211,10 +203,14 @@
       padding: 10px 20px;
     }
 
+    .pdp-hero-tags{
+      justify-content: center;
+      padding: 0rem 0.5rem;
+    }
     .pdp-hero-tag {
       padding: 0.5rem;
-      font-size: 0.8rem;
-      gap: 0.8rem;
+      font-size: 0.75rem;
+      gap: 0.4rem;
     }
 
     .hero-astor {
@@ -239,13 +235,13 @@
   }
 </style>
 
-<div class="hero-section" style="background-image: url({{ section.settings.banner_image |  image_url  }})">
+<div class="hero-section" >
   <img class="hero-astor" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/Item_cta-line-svg-1_webp.png?v=1728972004" />
   <div class="hero-content">
     <h1 class="banner-head-text">More than "just a VPN"</h1>
     <p class="banner-subhead">VPN, protection, and cyber insurance</p>
     <div class="btn-section">
-      <div class="get-button">
+      <div class="get-button hero-get-btn">
         <div>Get Safehouse</div>
         <svg
           width="1.5rem"
@@ -326,8 +322,13 @@
     "settings": [
       {
         "type": "image_picker",
-        "id": "banner_image",
+        "id": "desktop_image",
         "label": "Banner Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile Banner Image"
       }
 
     ]
