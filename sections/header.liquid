@@ -71,7 +71,7 @@
   .cta-button1 {
     padding: 10px 20px;
     border-radius: 10px;
-    background-color: #ff6230;
+    background-color: #652fff;
     color: #FFFFFF;
     text-decoration: none;
     font-family: Inter;
@@ -208,10 +208,10 @@
                   preload: true
                 }}
               </div>
-            {% comment %} {%- else -%}
+            {% comment %} {% else %}
               <span class="h2">{{ shop.name }}</span> {% endcomment %}
             {%- endif -%}
-            {% comment %} <span class="h1">{{ logo_title }}</span> {% endcomment %}
+            <span class="h1">{{ logo_title }}</span>
           
           </a>
       {%- if request.page_type == 'index' -%}

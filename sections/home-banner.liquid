@@ -1,0 +1,310 @@
+<style>
+  .home-banner {
+    position: relative;
+    width: 100%;
+    min-height: min-content;
+    height: 100vh;
+    background-size: cover;
+    /* display: flex; */
+    /* justify-content: flex-start; */
+    align-items: center;
+    color: white;
+    text-align: left;
+    overflow: hidden;
+  }
+
+  .home-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, {{ section.settings.overlay_opacity }});
+  }
+
+  .home-content {
+    width: 888px;
+    height: 261px;
+    padding: 0;
+    position: relative;
+    left: 75px;
+    z-index: 2;
+  }
+
+  .home-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .home-content p {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 30px 0 20px;
+    opacity: 70%;
+  }
+
+  .home-banner .cta-button {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .home-banner .cta-button:hover {
+    background-color: darken({{ section.settings.cta_button_bg_color }}, 10%);
+  }
+
+  .home-banner .banner-head-text {
+    font-family: Tomato Grotesk;
+    font-weight: 400;
+    font-size: 5.8rem;
+    line-height: 4.2rem;
+    text-align: left;
+    letter-spacing: 0.3px;
+    margin: 2rem 0;
+  }
+  .home-banner .banner-subhead {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+  }
+  .home-banner .get-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    min-width: min-content;
+    background-color: #652fff;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+
+  .home-banner .btn-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2rem 0;
+  }
+
+  .home-banner .social-icon {
+    position: relative;
+    width: 15rem;
+    margin-right: -6rem;
+    margin-left: 2rem;
+  }
+  .home-banner .social-icon .icon2 {
+    position: relative;
+    right: 2.9rem;
+  }
+  .home-banner .social-icon .icon3 {
+    position: relative;
+    right: 5.7rem;
+  }
+  .home-banner .social-media {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4rem;
+    width: 80%;
+  }
+
+  .home-banner .pdp-hero-tags {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .home-banner .pdp-hero-tag {
+    display: flex;
+    align-items: center;
+    border-radius: 5rem;
+    gap: 1rem;
+    background-color: #F7F4FF;
+    color: #212636;
+    font-size: x-small;
+    padding: 8px 2.5rem;
+
+
+  }
+  .home-banner .hero-astor {
+    display: block;
+    height: 305px;
+    width: 110%;
+    background-image: url('https://cdn.shopify.com/s/files/1/0006/5418/0388/files/Item_cta-line-svg-1_webp.png?v=1728972004');
+
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .home-banner {
+      background-position: center;
+      height: 80%;
+      justify-content: center;
+    }
+    .home-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 2rem;
+      height: 61vh;
+    }
+
+    .home-banner .get-button {
+      width: 61%;
+    }
+    .home-banner .social-media {
+      margin-top: 0;
+      width: 100%;
+    }
+    .home-content h1 {
+      font-size: 36px;
+    }
+
+    .home-content p {
+      font-size: 16px;
+    }
+    .home-banner .btn-section {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .home-banner .cta-button {
+      padding: 10px 20px;
+    }
+
+    .home-banner .pdp-hero-tag {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+      gap: 0.8rem;
+    }
+
+    .home-banner .hero-astor {
+      display: block;
+      background-image: url('https://cdn.shopify.com/s/files/1/0006/5418/0388/files/Item_cta-line-svg-1_webp.png?v=1728972004');
+      position: absolute;
+      top: 12%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .home-content h1 {
+      font-size: 28px;
+    }
+
+    .home-content p {
+      font-size: 14px;
+    }
+
+    .home-banner .cta-button {
+      padding: 8px 18px;
+    }
+  }
+</style>
+
+<div class="home-banner" style="background-image: url({{ section.settings.banner_image |  image_url  }})">
+  <div class="hero-astor"></div>
+  <div class="home-content">
+    <h1 class="banner-head-text">More than "just a VPN"</h1>
+    <p class="banner-subhead">VPN, protection, and cyber insurance</p>
+    <div class="btn-section">
+      <div class="get-button">
+        <div>Get Safehouse</div>
+        <svg
+          width="1.5rem"
+          height="1.2rem"
+          viewBox="0 0 19 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.8882 0.732424L18.6382 7.48242C18.7431 7.58694 18.8263 7.71113 18.8831 7.84788C18.9399 7.98462 18.9691 8.13123 18.9691 8.2793C18.9691 8.42736 18.9399 8.57397 18.8831 8.71072C18.8263 8.84747 18.7431 8.97166 18.6382 9.07617L11.8882 15.8262C11.6769 16.0375 11.3902 16.1563 11.0913 16.1562C10.7925 16.1562 10.5058 16.0375 10.2945 15.8262C10.0831 15.6148 9.9644 15.3282 9.9644 15.0293C9.9644 14.7304 10.0831 14.4438 10.2945 14.2324L15.1235 9.40336H1.34229C1.04392 9.40336 0.757769 9.28483 0.54679 9.07386C0.335812 8.86288 0.217285 8.57673 0.217285 8.27836C0.217285 7.97999 0.335812 7.69384 0.54679 7.48287C0.757769 7.27189 1.04392 7.15336 1.34229 7.15336L15.1235 7.15336L10.2935 2.3243C10.0822 2.11296 9.96346 1.82631 9.96346 1.52742C9.96346 1.22854 10.0822 0.941895 10.2935 0.73055C10.5049 0.519205 10.7915 0.400471 11.0904 0.400471C11.3893 0.400471 11.6759 0.519205 11.8873 0.73055L11.8882 0.732424Z" fill="white" />
+        </svg>
+
+      </div>
+
+      <div style="display: flex;">
+
+        <div class="social-icon">
+          {% render 'homebanner-svg'
+            , condition: 'svg1' %}
+          {% render 'homebanner-svg'
+            , condition: 'svg2' %}
+          {% render 'homebanner-svg'
+            , condition: 'svg3' %}
+        </div>
+        <div style="width: 12rem;">
+          <div style="display: flex; align-content: center;">
+            {% for i in (1..5) %}
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 13 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.4676 5.4268C12.4277 5.30323 12.3524 5.19413 12.2509 5.11309C12.1495 5.03206 12.0265 4.98268 11.8971 4.9711L8.29896 4.64441L6.87608 1.31413C6.82502 1.19484 6.74008 1.09315 6.63177 1.02169C6.52346 0.950227 6.39656 0.912125 6.2668 0.912109C6.13697 0.912123 6.01 0.950293 5.90167 1.02187C5.79335 1.09346 5.70845 1.19529 5.65753 1.31473L4.23465 4.64441L0.635936 4.97117C0.506794 4.983 0.383963 5.03247 0.282672 5.11345C0.181381 5.19443 0.106086 5.30336 0.0661204 5.42673C0.0258409 5.55013 0.0227342 5.68264 0.0571869 5.80779C0.0916396 5.93294 0.162131 6.0452 0.25989 6.1306L2.9797 8.51588L2.17772 12.0488C2.14879 12.1755 2.15779 12.3079 2.2036 12.4296C2.24941 12.5512 2.33 12.6567 2.43533 12.7328C2.54812 12.8148 2.68395 12.859 2.8234 12.8592C2.94312 12.859 3.06054 12.8263 3.16311 12.7646L6.26687 10.9096L9.3695 12.7646C9.4806 12.8314 9.60892 12.864 9.73844 12.8584C9.86796 12.8527 9.99296 12.8091 10.0978 12.7328C10.2031 12.6566 10.2837 12.5512 10.3295 12.4295C10.3753 12.3079 10.3844 12.1755 10.3556 12.0488L9.55351 8.51588L12.2733 6.13113C12.3712 6.04567 12.4417 5.93334 12.4763 5.80811C12.5108 5.68288 12.5078 5.55026 12.4676 5.42673L12.4676 5.4268Z" fill="#FBBF24" />
+              </svg>
+            {% endfor %}
+          </div>
+          <div style="font-weight: 700; font-size:xx-small;">
+            People Trusts and goo
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <div class="pdp-hero-tags">
+      <div class="pdp-hero-tag">
+        <svg
+          width="19"
+          height="19"
+          viewBox="0 0 19 19"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.8311 7.23839C12.8842 7.29153 12.9264 7.35463 12.9552 7.42408C12.984 7.49354 12.9989 7.56799 12.9989 7.64317C12.9989 7.71836 12.984 7.79281 12.9552 7.86227C12.9264 7.93172 12.8842 7.99482 12.8311 8.04796L8.82614 12.0529C8.77301 12.1061 8.70991 12.1483 8.64045 12.1771C8.571 12.2058 8.49655 12.2207 8.42136 12.2207C8.34618 12.2207 8.27173 12.2058 8.20227 12.1771C8.13281 12.1483 8.06972 12.1061 8.01658 12.0529L6.30019 10.3365C6.19284 10.2291 6.13252 10.0835 6.13252 9.93169C6.13252 9.77987 6.19284 9.63427 6.30019 9.52691C6.40754 9.41956 6.55315 9.35925 6.70497 9.35925C6.85679 9.35925 7.0024 9.41956 7.10975 9.52691L8.42136 10.8392L12.0215 7.23839C12.0746 7.1852 12.1377 7.143 12.2072 7.11421C12.2766 7.08541 12.3511 7.07059 12.4263 7.07059C12.5015 7.07059 12.5759 7.08541 12.6454 7.11421C12.7148 7.143 12.7779 7.1852 12.8311 7.23839ZM17.0033 9.35956C17.0033 10.8306 16.5671 12.2686 15.7498 13.4917C14.9326 14.7148 13.771 15.6682 12.4119 16.2311C11.0528 16.794 9.55737 16.9413 8.1146 16.6543C6.67183 16.3674 5.34656 15.659 4.30638 14.6188C3.2662 13.5786 2.55783 12.2534 2.27085 10.8106C1.98386 9.36781 2.13115 7.87234 2.69409 6.51328C3.25703 5.15422 4.21034 3.99262 5.43346 3.17535C6.65658 2.35809 8.09459 1.92188 9.56562 1.92188C11.5376 1.92396 13.4282 2.70824 14.8226 4.10262C16.2169 5.49701 17.0012 7.38761 17.0033 9.35956ZM15.8591 9.35956C15.8591 8.11484 15.4899 6.89807 14.7984 5.86312C14.1069 4.82817 13.124 4.02153 11.974 3.54519C10.824 3.06886 9.55864 2.94423 8.33783 3.18706C7.11703 3.42989 5.99565 4.02929 5.1155 4.90944C4.23534 5.78959 3.63595 6.91097 3.39312 8.13178C3.15029 9.35258 3.27492 10.618 3.75125 11.768C4.22759 12.9179 5.03423 13.9008 6.06918 14.5924C7.10413 15.2839 8.3209 15.653 9.56562 15.653C11.2342 15.6511 12.8338 14.9874 14.0137 13.8076C15.1935 12.6278 15.8572 11.0281 15.8591 9.35956Z" fill="#212636" />
+        </svg>
+        <div>State of the art encryption & privacy</div>
+      </div>
+      <div class="pdp-hero-tag">
+        <svg
+          width="19"
+          height="19"
+          viewBox="0 0 19 19"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.8311 7.23839C12.8842 7.29153 12.9264 7.35463 12.9552 7.42408C12.984 7.49354 12.9989 7.56799 12.9989 7.64317C12.9989 7.71836 12.984 7.79281 12.9552 7.86227C12.9264 7.93172 12.8842 7.99482 12.8311 8.04796L8.82614 12.0529C8.77301 12.1061 8.70991 12.1483 8.64045 12.1771C8.571 12.2058 8.49655 12.2207 8.42136 12.2207C8.34618 12.2207 8.27173 12.2058 8.20227 12.1771C8.13281 12.1483 8.06972 12.1061 8.01658 12.0529L6.30019 10.3365C6.19284 10.2291 6.13252 10.0835 6.13252 9.93169C6.13252 9.77987 6.19284 9.63427 6.30019 9.52691C6.40754 9.41956 6.55315 9.35925 6.70497 9.35925C6.85679 9.35925 7.0024 9.41956 7.10975 9.52691L8.42136 10.8392L12.0215 7.23839C12.0746 7.1852 12.1377 7.143 12.2072 7.11421C12.2766 7.08541 12.3511 7.07059 12.4263 7.07059C12.5015 7.07059 12.5759 7.08541 12.6454 7.11421C12.7148 7.143 12.7779 7.1852 12.8311 7.23839ZM17.0033 9.35956C17.0033 10.8306 16.5671 12.2686 15.7498 13.4917C14.9326 14.7148 13.771 15.6682 12.4119 16.2311C11.0528 16.794 9.55737 16.9413 8.1146 16.6543C6.67183 16.3674 5.34656 15.659 4.30638 14.6188C3.2662 13.5786 2.55783 12.2534 2.27085 10.8106C1.98386 9.36781 2.13115 7.87234 2.69409 6.51328C3.25703 5.15422 4.21034 3.99262 5.43346 3.17535C6.65658 2.35809 8.09459 1.92188 9.56562 1.92188C11.5376 1.92396 13.4282 2.70824 14.8226 4.10262C16.2169 5.49701 17.0012 7.38761 17.0033 9.35956ZM15.8591 9.35956C15.8591 8.11484 15.4899 6.89807 14.7984 5.86312C14.1069 4.82817 13.124 4.02153 11.974 3.54519C10.824 3.06886 9.55864 2.94423 8.33783 3.18706C7.11703 3.42989 5.99565 4.02929 5.1155 4.90944C4.23534 5.78959 3.63595 6.91097 3.39312 8.13178C3.15029 9.35258 3.27492 10.618 3.75125 11.768C4.22759 12.9179 5.03423 13.9008 6.06918 14.5924C7.10413 15.2839 8.3209 15.653 9.56562 15.653C11.2342 15.6511 12.8338 14.9874 14.0137 13.8076C15.1935 12.6278 15.8572 11.0281 15.8591 9.35956Z" fill="#212636" />
+        </svg>
+        <div>30 days money back guarantee
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Banner Image",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "banner_image",
+        "label": "Banner Image"
+      }
+
+    ]
+  }
+
+{% endschema %}
