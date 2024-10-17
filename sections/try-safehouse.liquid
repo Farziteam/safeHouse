@@ -1,73 +1,178 @@
 <style>
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+  }
+
+  .faq-title {
+    text-align: center;
+    font-family: Tomato Grotesk;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 56.64px;
+    letter-spacing: -0.9599999785423279px;
+    text-align: center;
+
+  }
+
+  .image-text-accordion {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-height: 90%;
+    padding: 0 1rem;
+  }
+  .image-text-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 472px;
+  }
+
+  .image-section {
+    width: 100%;
+  }
+  .image-section img {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  .text-btn-section {
+    width: 100%;
+    padding-left: 2rem;
+  }
+
+  .faq-text {
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 56.64px;
+    letter-spacing: -0.9599999785423279px;
+    text-align: left;
+    color: #652FFF;
+
+  }
+
+  .faq-btn {}
+
+.faq-btn a {
+  max-width: 200px;
+  max-height: 56px;
+  border-radius: 16px;
+  padding: 16px;
+  color: #ffffff;
+
+}
 .accordion {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0px auto;
+  max-width: 667px;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
+
+.text-section {
+  background-color: #652fff;
+  padding: 2rem;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  color: #ffffff;
+}
+
+.text-section h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+
+@media(max-width: 767px) {
+  .image-text-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .image-section,
+  .text-btn-section {
+    width: 100%;
+  }
+
+  .accordion {
+    width: 100%;
+    margin-top: 2rem;
+    /* Spacing between sections */
+  }
+
+  .faq-title {
+    margin-top: 1rem;
+    /* Space above title */
+  }
 }
 </style>
 
-<div style="display: flex; background-color: #f7f4ff; padding: 4rem 8rem;">
 
-    <div style="display: flex; flex-direction: column; align-items:flex-start; width: 45rem; height:60rem; ">
-        <div style="background-color: #652fff; position:relative; padding:0rem 5rem; overflow:hidden; border-top-right-radius: 2rem; border-top-left-radius: 2rem;">
-            <h1 style="color: #ffffff;  font-size:6rem; text-align: left !important;">Try Safehouse For Free</h1>
-            <div style=" width: 75% ;display: flex; position: relative; z-index:100; align-items: center; gap: 1rem; padding: 10px 20px; border-radius: 10px; background-color: #ffffff; color: #652fff; text-decoration: none; font-family: Inter; font-weight: 400; font-size: 18px;">
-                <div>Whatsapp Support</div>
-                <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.8882 0.732424L18.6382 7.48242C18.7431 7.58694 18.8263 7.71113 18.8831 7.84788C18.9399 7.98462 18.9691 8.13123 18.9691 8.2793C18.9691 8.42736 18.9399 8.57397 18.8831 8.71072C18.8263 8.84747 18.7431 8.97166 18.6382 9.07617L11.8882 15.8262C11.6769 16.0375 11.3902 16.1563 11.0913 16.1562C10.7925 16.1562 10.5058 16.0375 10.2945 15.8262C10.0831 15.6148 9.9644 15.3282 9.9644 15.0293C9.9644 14.7304 10.0831 14.4438 10.2945 14.2324L15.1235 9.40336H1.34229C1.04392 9.40336 0.757769 9.28483 0.54679 9.07386C0.335812 8.86288 0.217285 8.57673 0.217285 8.27836C0.217285 7.97999 0.335812 7.69384 0.54679 7.48287C0.757769 7.27189 1.04392 7.15336 1.34229 7.15336L15.1235 7.15336L10.2935 2.3243C10.0822 2.11296 9.96346 1.82631 9.96346 1.52742C9.96346 1.22854 10.0822 0.941895 10.2935 0.73055C10.5049 0.519205 10.7915 0.400471 11.0904 0.400471C11.3893 0.400471 11.6759 0.519205 11.8873 0.73055L11.8882 0.732424Z" fill="#652fff"/>
-                </svg>
+<div class="faq-container">
+  <h2 class="faq-title">Safehouse's FAQs</h2>
+  <div class="image-text-accordion">
 
-            </div>
+    <div class="image-text-section">
+      <div class="image-section">
+        <img src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/VIP-Plus_Front_1000x1000_54de7c94-7e81-47e7-ba66-ae33460f2e4f.png?v=1729150452" />
+      </div>
+      <div class="text-btn-section">
+        <p class="faq-text">Try Safehouse risk free</p>
+        {% comment %} <div class="faq-btn">Download VPN</div> {% endcomment %}
+        <div class="faq-btn">
+          <a href="link" style="display: flex;  align-items: center; justify-content: space-between; gap: 1rem; padding: 10px 20px; border-radius: 10px; background-color: #652FFF; color: #FFFFFF; text-decoration: none; font-family: Inter; font-weight: 400; font-size: 18px; ">
 
-            <img src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/SVG.png?v=1727164065" style="position: relative;  bottom: 20%;  left: 47.5%;"/>
+            <div>Download VPN</div>
+            <svg
+              width="19"
+              height="17"
+              viewBox="0 0 19 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.8882 0.732424L18.6382 7.48242C18.7431 7.58694 18.8263 7.71113 18.8831 7.84788C18.9399 7.98462 18.9691 8.13123 18.9691 8.2793C18.9691 8.42736 18.9399 8.57397 18.8831 8.71072C18.8263 8.84747 18.7431 8.97166 18.6382 9.07617L11.8882 15.8262C11.6769 16.0375 11.3902 16.1563 11.0913 16.1562C10.7925 16.1562 10.5058 16.0375 10.2945 15.8262C10.0831 15.6148 9.9644 15.3282 9.9644 15.0293C9.9644 14.7304 10.0831 14.4438 10.2945 14.2324L15.1235 9.40336H1.34229C1.04392 9.40336 0.757769 9.28483 0.54679 9.07386C0.335812 8.86288 0.217285 8.57673 0.217285 8.27836C0.217285 7.97999 0.335812 7.69384 0.54679 7.48287C0.757769 7.27189 1.04392 7.15336 1.34229 7.15336L15.1235 7.15336L10.2935 2.3243C10.0822 2.11296 9.96346 1.82631 9.96346 1.52742C9.96346 1.22854 10.0822 0.941895 10.2935 0.73055C10.5049 0.519205 10.7915 0.400471 11.0904 0.400471C11.3893 0.400471 11.6759 0.519205 11.8873 0.73055L11.8882 0.732424Z" fill="white" />
+            </svg>
 
+
+          </a>
         </div>
-        <div style="background-color: #d9cdff; height: 12rem; border-bottom-left-radius: 2rem; border-bottom-right-radius: 2rem; width: 100%;">
-
-        </div>
-
+      </div>
     </div>
-    <div class="accordian">
-        {% render 'faq-card' ques: "Why do we Change?" ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
-        {% render 'faq-card' ques: "Why do we Change?" ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
-        {% render 'faq-card' ques: "Why do we Change?" ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
-        {% render 'faq-card' ques: "Why do we Change?" ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
-        {% render 'faq-card' ques: "Why do we Change?" ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
-        {% render 'faq-card' ques: "Why do we Change?" ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
-        {% render 'faq-card' ques: "Why do we Change?" ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
-        {% render 'faq-card' ques: "Why do we Change?" ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
-        {% render 'faq-card' ques: "Why do we Change?" ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
-        {% render 'faq-card' ques: "Why do we Change?" ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
-        {% render 'faq-card' ques: "Why do we Change?" ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
-        {% render 'faq-card' ques: "Why do we Change?" ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
-        {% render 'faq-card' ques: "Why do we Change?" ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
+    <div class="accordion">
+      {% render 'faq-card' ques: "Why should I pay for a VPN service?" ans: "Better services come at a price. You're more likely to encounter sluggish connections and inadequate security with free VPN providers since they can't compete with the level of service quality and internet security that a paid provider can supply. If you use a free VPN, its designers have to generate money somehow, so they may shower you with advertisements, track and sell your data, or even exploit your device to route other people’s traffic through – a reliable paid VPN company won’t. You may browse with more online privacy and without worrying about data or bandwidth limits when you use Safehouse VPN since you can be confident that your personal information is secure thanks to state-of-the-art encryption. Still unsure? We are offering a free seven-day trial of our services with no obligations." %}
+      {% render 'faq-card' ques: "Can I Use a Free VPN?" ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
+      {% render 'faq-card' ques: "Is Safehouse VPN compatible with international travel? " ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
+      {% render 'faq-card' ques: "Which devices does Safehouse VPN support?" ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
+      {% render 'faq-card' ques: "How to know if your device is hacked?" ans: "Our commitment is to provide comprehensive support to those who dream of starting a digital business and expanding their sales channels. That's why we decided to invest fully in our new solution: a sales platform without inventory, integrated with the main marketplaces in the country." %}
     </div>
+  </div>
 </div>
 
+
 <script>
- const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
-
-accordionItemHeaders.forEach(accordionItemHeader => {
-   accordionItemHeader.addEventListener("click", event => {
-    
-     // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
-    
-    // const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
-    // if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
-    //    currentlyActiveAccordionItemHeader.classList.toggle("active");
-    //    currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
-    //  }
-
-     accordionItemHeader.classList.toggle("active");
-     const accordionItemBody = accordionItemHeader.nextElementSibling;
-     if(accordionItemHeader.classList.contains("active")) {
+  const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+  
+  accordionItemHeaders.forEach(accordionItemHeader => {
+  accordionItemHeader.addEventListener("click", event => {
+    // Close all accordion contents
+    const allContents = document.querySelectorAll(".accordion-item-body");
+    allContents.forEach(content => {
+      content.style.maxHeight = 0;
+      content.previousElementSibling.classList.remove("active");
+    });
+  
+    // Toggle the clicked accordion
+    const accordionItemBody = accordionItemHeader.nextElementSibling;
+    accordionItemHeader.classList.toggle("active");
+    if (accordionItemHeader.classList.contains("active")) {
       accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-     }
-     else {
-       accordionItemBody.style.maxHeight = 0;
-     }
-    
-   });
-});
-
+    } else {
+      accordionItemBody.style.maxHeight = 0;
+    }
+  });
+  });
 </script>
