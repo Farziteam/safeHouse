@@ -4,17 +4,137 @@
     flex-direction: column;
     align-items: center;
   }
-  .demo-video img {
+
+  .wrap {
+    position: relative;
+    max-width: 1000px;
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  .box-video {
+    position: relative;
     width: 100%;
-    height: 584px;
+    margin: 0 auto 20px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .box-video .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+  }
+
+  .bg-video::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 3;
+  }
+
+  .box-video .bt-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -30px 0 0 -30px;
+    display: none;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    text-indent: -999em;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease-out;
+  }
+
+  .box-video .bt-play:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 0;
+    width: 0;
+    margin: -12px 0 0 -6px;
+    border: solid transparent;
+    border-left-color: #000;
+    border-width: 12px 20px;
+    transition: all 0.3s ease-out;
+  }
+
+  .box-video:hover .bt-play {
+    transform: scale(1.1);
+  }
+
+  .box-video.open .bg-video {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s 0.8s;
+  }
+
+  .box-video.open .video-container {
+    opacity: 1;
+    transition: all 0.6s 0.8s;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.27198%;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 </style>
 
+
 <div class="demo-video">
   <h1>What is VPN?</h1>
-  <div>
-
-    <img src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/demo-vid-img_svg.png?v=1729069611" />
-
+  <div class="wrap">
+    <div class="box-video">
+      <div class="bg-video" style="background-image: url(https://cdn.shopify.com/s/files/1/0006/5418/0388/files/demo-vid-img_svg.png?v=1729069611);">
+        <div class="bt-play">Play</div>
+      </div>
+      <div class="video-container">
+        <iframe
+          width="590"
+          height="332"
+          src="https://cdn.shopify.com/videos/c/o/v/5f88079c5a1c4585859e15f9f9fa87bb.mp4"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
   </div>
 </div>
+
+<script>
+    document.querySelector('.box-video').addEventListener('click', function() {
+        var iframe = this.querySelector('iframe');
+        // Check if the src already has parameters
+        if (iframe.src.includes('?')) {
+            iframe.src += "&autoplay=1"; // Append if there are existing parameters
+        } else {
+            iframe.src += "?autoplay=1"; // Use ? for the first parameter
+        }
+        this.classList.add('open');
+    });
+</script>
