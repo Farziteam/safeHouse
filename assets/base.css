@@ -2388,9 +2388,9 @@ input[type="checkbox"] {
   display: block;
   position: absolute;
   border-radius: 20px;
-  left: 5vw;
+  left: 2.5vw;
   top: 1vh;
-  width: 90vw;
+  width: 95vw;
   margin: auto;
   background-color: rgb(var(--color-background));
 }
