@@ -96,6 +96,10 @@
     .des-logo{
       display: none;
     }
+
+    .sf_logo_title{
+      font-size: 2.5rem;
+    }
   }
   @media screen and (min-width: 750px) {
     .list-menu__item--link {
@@ -198,7 +202,7 @@
                 {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
                 {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
                 {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-                {{ settings.logo | image_url: width: 600 | image_tag:
+                {{ settings.logo | image_url: width: 700 | image_tag:
                   class: 'header__heading-logo motion-reduce',
                   widths: widths,
                   height: logo_height,
@@ -211,7 +215,7 @@
             {% comment %} {% else %}
               <span class="h2">{{ shop.name }}</span> {% endcomment %}
             {%- endif -%}
-            <span class="h1">{{ logo_title }}</span>
+            <span class="sf_logo_title">{{ logo_title }}</span>
           
           </a>
       {%- if request.page_type == 'index' -%}

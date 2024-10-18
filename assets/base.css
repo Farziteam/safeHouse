@@ -63,6 +63,11 @@
   --shadow-visible: var(--text-boxes-shadow-visible);
 }
 
+@font-face {
+  font-family: TomatoGrotesk_M;
+  src: url(TomatoGrotesk-Medium.woff);
+}
+
 .contains-media,
 .global-media-settings {
   --border-radius: var(--media-radius);
