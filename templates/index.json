@@ -41,10 +41,6 @@
     "try-safehouse": {
       "type": "try-safehouse",
       "settings": {}
-    },
-    "safehouse-footer": {
-      "type": "safehouse-footer",
-      "settings": {}
     }
   },
   "order": [
@@ -57,7 +53,6 @@
     "people-say",
     "proudly-featured",
     "support-guarante",
-    "try-safehouse",
-    "safehouse-footer"
+    "try-safehouse"
   ]
 }

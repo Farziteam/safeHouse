@@ -1,11 +1,49 @@
+<style>
+  .image-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+  }
+  .image-area img {
+    width: 146px;
+    height: 146px;
+
+  }
+  .gurantee-card-title {
+    font-family: Inter;
+
+    color: #302C2C;
+    font-family: Inter;
+    font-size: 41.81px;
+    font-weight: 400;
+    line-height: 49.28px;
+    letter-spacing: -0.8362590074539185px;
+    text-align: left;
+    margin: auto;
+  }
+  .gurantee-card-text {
+    font-family: Inter;
+    font-size: 26.88px;
+    font-weight: 400;
+    line-height: 40.32px;
+    letter-spacing: -0.26879754662513733px;
+    text-align: left;
+    color: #787676;
+    max-width: 486px;
+  }
+</style>
+
+
 <div style="background-color: {{bgColor}}; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8rem 6.5rem">
 
-  <div>
+  <div class="image-area">
     <img src={{icon}} />
   </div>
   <div>
-    <h1>{{ title }}</h1>
-    <p>{{ text }}</p>
+    <h5 class="gurantee-card-title">{{ title }}</h5>
+    <p class="gurantee-card-text">{{ text }}</p>
   </div>
   <a href={{btn_url}} style="display: flex;  align-items: center; justify-content: space-between; gap: 1rem; padding: 10px 20px; border-radius: 10px; background-color: #652FFF; color: #FFFFFF; text-decoration: none; font-family: Inter; font-weight: 400; font-size: 18px; margin-left: -53%">
 
