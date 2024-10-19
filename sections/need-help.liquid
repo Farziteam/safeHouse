@@ -34,6 +34,12 @@
         padding: 2rem;
     }
 
+    .need-help-card a{
+        text-decoration: none;
+        color:#212636;
+        
+    }
+
     @media screen and (max-width: 768px){
         .need-help-card{
             flex-direction: column;
@@ -59,14 +65,32 @@
 
     <div class="need-help-head">Need Help? Contact Us</div>
     <div class="need-help-card">
-        <div class="contact-card">
-            <div>Insupport@safehousetech.com</div>
+        <a href={{"mailto:" |  append: section.settings.need_email}} class="contact-card">
+            <div>{{section.settings.need_email}}</div>
             <img width="" height="" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/image_190.png?v=1727942876"/>
-        </div>
+        </a>
 
-        <div class="contact-card">
-            <div>+91 88518593</div>
+        <a href={{ "https://wa.me/+91" | append: section.settings.need_whatsapp }} target="_blank" class="contact-card">
+            <div>+91 {{section.settings.need_whasapp}}</div>
             <img width="" height="" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/Avatar_1.png?v=1727942876"/>
-        </div>
+        </a>
     </div>
 </div>
+
+{%schema%}
+{
+    "name": "Need Help Contact",
+    "settings": [
+        {
+            "label": "Contact Email",
+            "id": "need_email",
+            "type": "text"
+        },
+        {
+            "label": "Contact Whatsapp",
+            "id": "need_whasapp",
+            "type": "text"
+        },
+    ]
+}
+{%endschema%}

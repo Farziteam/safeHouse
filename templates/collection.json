@@ -10,6 +10,18 @@
     "huntary": {
       "type": "huntary",
       "settings": {
+        "social_icon1": "shopify:\/\/shop_images\/Social_Icons_4.png",
+        "social_text1": "Instagram",
+        "socail_url1": "https:\/\/www.instagram.com\/safehouse_tech",
+        "social_icon2": "shopify:\/\/shop_images\/Social_Icons_5.png",
+        "social_text2": "Facebook",
+        "socail_url2": "https:\/\/www.facebook.com\/safehousetech\/",
+        "social_icon3": "shopify:\/\/shop_images\/Social_Icons_6.png",
+        "social_text3": "LinkedIn",
+        "socail_url3": "https:\/\/in.linkedin.com\/company\/safehousetech",
+        "social_icon4": "shopify:\/\/shop_images\/Social_Icons_8.png",
+        "social_text4": "Whatsapp",
+        "socail_url4": "https:\/\/wa.me\/+919625084349"
       }
     },
     "product-membership": {
