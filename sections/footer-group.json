@@ -3,8 +3,71 @@
   "type": "footer",
   "sections": {
     "safehouse-footer": {
-      "type": "safehouse-footer",
+      "type": "footer",
+      "blocks": {
+        "link_list_tBqQp8": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Safehouse",
+            "menu": "safehouse"
+          }
+        },
+        "link_list_cURJfA": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Discover",
+            "menu": "discover"
+          }
+        },
+        "link_list_yJhzCx": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Resources",
+            "menu": "resources"
+          }
+        },
+        "link_list_EFEUAt": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Company",
+            "menu": "company"
+          }
+        },
+        "link_list_L67air": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Help & Support",
+            "menu": "help-support"
+          }
+        },
+        "brand_information_nBFPU9": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        }
+      },
+      "block_order": [
+        "link_list_tBqQp8",
+        "link_list_cURJfA",
+        "link_list_yJhzCx",
+        "link_list_EFEUAt",
+        "link_list_L67air",
+        "brand_information_nBFPU9"
+      ],
       "settings": {
+        "color_scheme": "",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": true,
+        "payment_enable": false,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },

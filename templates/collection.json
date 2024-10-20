@@ -57,6 +57,8 @@
     "need-help": {
       "type": "need-help",
       "settings": {
+        "need_email": "insupport@safehousetech.in",
+        "need_whasapp": "9625084349"
       }
     }
   },
