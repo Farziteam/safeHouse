@@ -112,6 +112,7 @@
     }
     .people-say-wrapper{
         border-radius: 2rem;
+        width: 97%;
     }
 
     .people-say-head{
@@ -180,6 +181,10 @@
         }
         .people-say-pagination{
             left: -40%;
+        }
+
+        .people-say-wrapper{
+            width: 103%;
         }
     }
    
@@ -337,3 +342,78 @@
         });
     });
 </script>
+
+{% schema %}
+{
+    "name": "people-say",
+    "settings": [
+        
+        ],
+    "blocks": [
+        {
+            "type": "google_reviews",
+            "name": "Google Reviews",
+            "settings": [
+                {
+                    "type": "range",
+                    "id": "num_reviews",
+                    "label": "Number of Reviews",
+                    "min": 1,
+                    "max": 5,
+                    "default": 1
+                },
+                {
+                    "type": "text",
+                    "id": "google_user",
+                    "label": "User Name"
+
+                },
+                {
+                    "type": "text",
+                    "id": "google_address",
+                    "label": "User Address"
+
+                },
+                {
+                    "type": "text",
+                    "id": "review-text",
+                    "label": "Review Text"
+
+                }
+            ]
+        },
+        {
+            "type": "apple_reviews",
+            "name": "Apple Reviews",
+            "settings": [
+                {
+                    "type": "range",
+                    "id": "num_reviews",
+                    "label": "Number of Reviews",
+                    "min": 1,
+                    "max": 5,
+                    "default": 1
+                },
+                {
+                    "type": "text",
+                    "id": "google_user",
+                    "label": "User Name"
+
+                },
+                {
+                    "type": "text",
+                    "id": "google_address",
+                    "label": "User Address"
+
+                },
+                {
+                    "type": "text",
+                    "id": "review-text",
+                    "label": "Review Text"
+
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

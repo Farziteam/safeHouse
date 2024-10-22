@@ -13,12 +13,12 @@
 
 @media screen and (max-width: 749px) {
   .footer .grid {
-    display: block;
+    /* display: block; */
   }
 
   .footer-block.grid__item {
     padding: 0;
-    margin: 4rem 0;
+    margin-bottom: 4rem;
     width: 100%;
   }
 
@@ -61,7 +61,7 @@
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
-    row-gap: 1.5rem;
+    row-gap: 0rem;
   }
 
   .footer__content-bottom-wrapper {
@@ -243,6 +243,11 @@
 
   .footer-block__newsletter {
     flex-direction: column;
+  }
+
+  .footer__copyright{
+    text-align: left !important;
+    margin-top: 0px !important;
   }
 }
 

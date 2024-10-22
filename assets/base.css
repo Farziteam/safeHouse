@@ -942,6 +942,9 @@ summary::-webkit-details-marker {
     width: 100%;
     max-width: none;
   }
+  .grid{
+    margin-bottom: 0rem !important;
+  }
 }
 
 .grid--1-col .grid__item {

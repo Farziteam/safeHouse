@@ -9,6 +9,9 @@
   .footer {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
     background-color: #f7f4ff;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 4rem;
   }
 
   .section-{{ section.id }}-padding {
@@ -21,6 +24,10 @@
     flex-direction: column;
   }
 
+  .footer-astor{
+        position: absolute;
+        bottom: -98.8%;
+  }
   .foot-store-btn{
         padding: 1rem 3rem;
         margin-right: 1rem;
@@ -35,9 +42,12 @@
         align-items: center;
         gap: 1rem;
         height: 50%;
+        text-decoration: none;
 
 
     }
+
+   
     .footer-section1{
         display: flex; 
         justify-content: space-between; 
@@ -49,6 +59,10 @@
         width:80%;
         margin:6rem auto;
     }
+    .foot-store-buttons2{
+      display: flex !important;
+      gap: 0rem;
+    }
 
     .footer-get-text{
         color: #652fff;
@@ -57,6 +71,7 @@
   @media screen and (min-width: 750px) {
     .footer {
       margin-top: {{ section.settings.margin_top }}px;
+      padding-bottom: 10rem !important;
     }
 
     .section-{{ section.id }}-padding {
@@ -69,13 +84,29 @@
 
     .footer-section1{
         border: 0px;
-        width: 138%;
-        margin-left: -4rem;
+        justify-content: center;
+        width: 103%;
+        margin-left: 0rem;
         background-color: transparent;
     }
 
     .footer-get-text{
             display: none;
+    }
+
+    .foot-store-buttons2{
+      display: flex !important;
+      gap: 0rem;
+    }
+
+    .foot-store-btn{
+      padding: 1rem 2rem;
+    }
+    .footer-astor{
+      bottom: 7%;
+      left: -13%;
+      height: 15%;
+
     }
   }
 {%- endstyle -%}
@@ -84,15 +115,15 @@
 
     <div class="footer-section1">
       <h1 class="footer-get-text">Get VPN Now</h1>
-      <div style="display: flex; gap:2rem">
-          <button class="foot-store-btn">
+      <div class="foot-store-buttons2">
+          <a class="foot-store-btn" href={{section.settings.play_url}}>
               <img width="auto" height="auto" src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/Logo.png?v=1727327140"/>
               Google Play
-          </button>
-          <button class="foot-store-btn">
+          </a>
+          <a class="foot-store-btn" href={{section.settings.apple_url}}>
               <img width="auto" height="auto" src="https://cdn.shopify.com/s/files/1/0719/6511/4625/files/Logo_1.png?v=1727327140"/>
               Apple Store
-          </button>
+          </a>
       </div>
     </div>
   {%- liquid
@@ -128,7 +159,7 @@
             endif
           -%}
           <div
-            class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="footer__blocks-wrapper grid grid--2-col grid--4-col-tablet {{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
             {% endif %}
@@ -386,7 +417,8 @@
           </ul>
         {%- endif -%}
       </div>
-    </div>
+      </div>
+      <img class="footer-astor" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/ASTOR.png?v=1727953747"/>
   </div>
 </footer>
 
@@ -498,6 +530,16 @@
     }
   ],
   "settings": [
+    {
+      "type": "url",
+      "id": "play_url",
+      "label": "Play URL"
+    },
+    {
+      "type": "url",
+      "id": "apple_url",
+      "label": "Apple URL"
+    },
     {
       "type": "color_scheme",
       "id": "color_scheme",
