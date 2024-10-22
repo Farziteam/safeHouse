@@ -31,6 +31,28 @@
     },
     "pdp-features": {
       "type": "pdp-features",
+      "blocks": {
+        "pdp_feat_slide_dJWU7C": {
+          "type": "pdp-feat-slide",
+          "settings": {
+            "feat_title": "Browse privately & securely. Hide your IP & location, and encrypt your data.",
+            "pdp_link": "#",
+            "feat_image": "shopify:\/\/shop_images\/Mockup_updated.png"
+          }
+        },
+        "pdp_feat_slide_whbGBh": {
+          "type": "pdp-feat-slide",
+          "settings": {
+            "feat_title": "Browse privately & securely. Hide your IP & location, and encrypt your data.",
+            "pdp_link": "#",
+            "feat_image": "shopify:\/\/shop_images\/Mockup_updated.png"
+          }
+        }
+      },
+      "block_order": [
+        "pdp_feat_slide_dJWU7C",
+        "pdp_feat_slide_whbGBh"
+      ],
       "settings": {
       }
     },
@@ -41,6 +63,70 @@
     },
     "people-say": {
       "type": "people-say",
+      "blocks": {
+        "apple_reviews_CKTkTa": {
+          "type": "apple_reviews",
+          "settings": {
+            "num_reviews": 1,
+            "google_user": "Aman Solanki",
+            "google_address": "Fatehpur India",
+            "review-text": "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!"
+          }
+        },
+        "apple_reviews_RkVAJb": {
+          "type": "apple_reviews",
+          "settings": {
+            "num_reviews": 2,
+            "google_user": "Ayush Pandey",
+            "google_address": "Balia India",
+            "review-text": "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!"
+          }
+        },
+        "apple_reviews_9YpFre": {
+          "type": "apple_reviews",
+          "settings": {
+            "num_reviews": 3,
+            "google_user": "Rishabh Pant",
+            "google_address": "Delhi India",
+            "review-text": "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!"
+          }
+        },
+        "google_reviews_TWgwJq": {
+          "type": "google_reviews",
+          "settings": {
+            "num_reviews": 4,
+            "google_user": "Aakash Deep",
+            "google_address": "Patna India",
+            "review-text": "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!"
+          }
+        },
+        "google_reviews_xVr4eB": {
+          "type": "google_reviews",
+          "settings": {
+            "num_reviews": 5,
+            "google_user": "Aman Madhukar",
+            "google_address": "Aligarh India",
+            "review-text": "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!"
+          }
+        },
+        "google_reviews_iT68EX": {
+          "type": "google_reviews",
+          "settings": {
+            "num_reviews": 5,
+            "google_user": "Saurabh Solanki",
+            "google_address": "Lucknow India",
+            "review-text": "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!"
+          }
+        }
+      },
+      "block_order": [
+        "apple_reviews_CKTkTa",
+        "apple_reviews_RkVAJb",
+        "apple_reviews_9YpFre",
+        "google_reviews_TWgwJq",
+        "google_reviews_xVr4eB",
+        "google_reviews_iT68EX"
+      ],
       "settings": {
       }
     },

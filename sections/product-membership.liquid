@@ -78,6 +78,12 @@
             font-size: 5rem;
             margin: 0px;
          }
+
+        .member-card:hover .features li span svg path {
+            fill: #652fff;
+        }
+
+
       
 
         .member-card h2{
@@ -131,19 +137,23 @@
             color: #333;
             margin: 10px 0;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
        
 
 
 
-        .memberrship-price del {
-            color: #999;
-            font-size: 18px;
+        .memberrship-price span {
+            color: #636363;
+            font-size: 2rem;
+            margin-bottom: 1;
         }
 
         .subtitle {
-            font-size: 1rem;
+            font-size: 1.5rem;
             line-height: 2rem;
             color: #B1B1B1;
             margin-bottom: 15px;
@@ -158,16 +168,18 @@
         }
 
         .features li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
             color: #333;
             font-size: 14px;
             margin: 10px 0;
         }
 
-        .features li::before {
-            content: '✔';
-            margin-right: 8px;
-            color: #652fff;
-        }
+       
+
+       
 
         .cta {
             background-color: #f7f4ff;
@@ -349,25 +361,51 @@
 
     </style>
 <section class="product-membership">
+    
     {% assign test_collection = collections['test'] %}
    
     <div class="pricing-container">
     {% for product in test_collection.products %}
-        {% assign price_per_month = product.price | divided_by: 12 %}
         
-
+        {% assign rounded_price = product.price | round %}
+ 
         <div class="member-card">
-            <div class="badge"><span> <img  width="" height="" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/Vector_2.png?v=1727426174"/></span> Discount Applied:<span style="font-weight: 700;"> SPECIALDEAL</span></div>
+            <div class="badge">
+                {% for i in (1..3) %} 
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.9961 1.79492C13.0454 1.79492 13.8719 2.58745 14.3995 3.65684L16.1616 7.21008C16.215 7.32005 16.3417 7.4749 16.5321 7.61656C16.7223 7.75807 16.9086 7.83613 17.0311 7.85673L20.2207 8.39105C21.3729 8.58466 22.3386 9.14941 22.6521 10.1328C22.9653 11.1154 22.5064 12.1365 21.6778 12.9666L21.677 12.9674L19.1991 15.4658C19.1009 15.5648 18.9909 15.7513 18.9219 15.9944C18.8534 16.2357 18.8473 16.4556 18.8784 16.5977L18.8788 16.5996L19.5877 19.6903C19.8818 20.9767 19.7843 22.2522 18.8771 22.9191C17.9667 23.5883 16.7227 23.2916 15.5925 22.6185L12.6026 20.8339C12.477 20.7589 12.2614 20.6982 12.0011 20.6982C11.7427 20.6982 11.5226 20.7581 11.3888 20.8359L11.3869 20.837L8.40288 22.6181C7.27405 23.2936 6.03154 23.5849 5.12111 22.9151C4.21449 22.2481 4.11214 20.975 4.40711 19.6896L5.1159 16.5996L5.11633 16.5977C5.14741 16.4556 5.14133 16.2357 5.0728 15.9944C5.0038 15.7513 4.89379 15.5648 4.79558 15.4658L2.31585 12.9656C1.49265 12.1356 1.03521 11.1153 1.34595 10.1342C1.65759 9.15017 2.62143 8.58472 3.77433 8.39098L6.96132 7.85711L6.96233 7.85694C7.07917 7.83667 7.2627 7.75948 7.45248 7.61761C7.64261 7.47546 7.76959 7.32028 7.82312 7.21008L7.82582 7.20459L9.58562 3.65589L9.58632 3.6545C10.119 2.586 10.948 1.79492 11.9961 1.79492Z" fill="white"/>
+                    </svg>
+                {% endfor %}
+                <span>Popular Offer</span> 
+            </div>
             <div class="member-card-section">
-                {% comment %} <h2>{{ product.title }}</h2> {% endcomment %}
-                <div class="memberrship-price">{{ price_per_month | money }}</div>
-                <p class="subtitle">for 1 month</p>
+                
+                <div class="memberrship-price">
+                    {% if product.price == rounded_price %}
+                        {{ rounded_price |  divided_by: 100 }} <!-- If there's no decimal, just display the rounded price -->
+                      {% else %}
+                        {{ product.price }} <!-- Otherwise, display the price with decimals -->
+                      {% endif %}
+                  <span>/{{product.metafields.custom.price_for_period.value}}</span></div>
+                <p class="subtitle">for {{product.metafields.custom.price_for_period.value}}</p>
             </div>
             <div class="expand-button" id="arrow-{{ forloop.index }}" onclick="toggleCard({{ forloop.index }})"><svg class="fixing_arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(-90)"><path d="M12.7688 0.6705C13.1579 0.957076 13.2411 1.50482 12.9545 1.89393C12.7319 2.19616 12.5092 2.48346 12.314 2.73368C11.9241 3.23319 11.3875 3.90215 10.8044 4.57368C10.2251 5.24086 9.58287 5.93059 8.98324 6.4604C8.68443 6.72442 8.3756 6.96723 8.07445 7.14878C7.79732 7.31584 7.41652 7.5 6.99991 7.5C6.5833 7.5 6.20247 7.31584 5.92534 7.14878C5.62419 6.96723 5.31536 6.72442 5.01655 6.4604C4.41692 5.93059 3.77464 5.24086 3.19535 4.57368C2.6123 3.90215 2.07564 3.23319 1.68581 2.73368C1.49054 2.48346 1.2679 2.19616 1.0453 1.89393C0.758728 1.50483 0.841846 0.957077 1.23095 0.670501C1.38737 0.555303 1.56942 0.499853 1.74984 0.500004L6.9999 0.500004L12.2499 0.500003C12.4304 0.499852 12.6124 0.555302 12.7688 0.6705Z" fill="#14181F"/> </svg>
             </div>
             <div class="member-card-section2" id="section-{{ forloop.index }}">
+                {% assign features = product.metafields.custom.product_features.value %}
+                
                 <ul class="features">
-                    <li>30 day money-back</li>
+                     
+                     {% for feat in features %}
+                        
+                        <li>
+                            <span>
+                               {{feat.icon}} 
+                            </span>
+                            {{feat.feature}}
+                        </li>
+                    {%endfor%} 
+                    
                 </ul>
                 <a href="#" class="cta">Get started</a>
             </div>
@@ -471,6 +509,7 @@
     
 
 </section>
+
 
 <script>
    

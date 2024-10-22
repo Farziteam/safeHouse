@@ -234,7 +234,12 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper people-say-wrapper">
                         <!-- Slides -->
-                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman1" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                        {% assign google_rev = section.blocks | where: 'type', 'google_reviews' %}
+                        {% for block in google_rev %}
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:{{block.settings.google_user}} star-count:{{block.settings.num_reviews}} addres:{{block.settings.google_address}} review-text: {{block.settings.review-text}} %} </div>
+                        <!-- Stuff -->
+                        {% endfor %}
+                            {% comment %} <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman1" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
                             <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman2" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
                             <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman3" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
                             <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
@@ -243,7 +248,7 @@
                             <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
                             <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
                             <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Andrew Huberman4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div> {% endcomment %}
                     </div>
 
                     <!-- If we need pagination -->
@@ -273,7 +278,15 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper people-say-wrapper">
                         <!-- Slides -->
-                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant1" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+
+                        {% assign apple_rev = section.blocks | where: 'type', 'apple_reviews' %}
+                        {% for block in apple_rev %}
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:{{block.settings.google_user}} star-count:{{block.settings.num_reviews}} addres:{{block.settings.google_address}} review-text: {{block.settings.review-text}} %} </div>
+                        <!-- Stuff -->
+                        {% endfor %}
+
+                        
+                            {% comment %} <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant1" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
                             <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant2" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
                             <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant3" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
                             <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant4" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
@@ -282,7 +295,7 @@
                             <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant7" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
                             <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant8" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
                             <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant9" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
-                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant10" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div>
+                            <div class="swiper-slide people-say-slide">{%  render 'people-say-card' name:"Rishabh Pant10" star-count:5 addres:"USA Nevada" review-text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!" %} </div> {% endcomment %}
                     </div>
 
                     <!-- If we need pagination -->
