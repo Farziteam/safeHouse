@@ -33,7 +33,7 @@
             text-align: center;
             position: relative;
             width: 25%;
-            height: 40rem;
+            height: 43rem;
             margin: 0.5%;
         }
          .member-card:hover {
@@ -81,6 +81,10 @@
 
         .member-card:hover .features li span svg path {
             fill: #652fff;
+        }
+
+        .member-card:hover .stickers{
+            display:flex;
         }
 
 
@@ -252,21 +256,20 @@
         }
         .stickers{
             background-color: #f7f4ff;
-            display: flex;
             justify-content: flex-end;
             padding: 0.5rem;
             border-bottom-left-radius: 1rem;
             border-bottom-right-radius: 1rem;
+            width: 100%;
             height: 3rem;
+            display: none;
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
         }
 
-        .member-card .stickers{
-            display: none;
-        }
-        .member-card.featured .stickers{
-            display: flex;
-            gap: 1rem;
-        }
+       
+        
         .expand-button{
             background-color: #d9d9d9;
             padding: 1rem;
@@ -274,6 +277,7 @@
             width: 3rem;
             height: 3rem;
             display: none;
+            z-index: 10;
            
         }
 
@@ -296,10 +300,22 @@
                 border: 1px solid #e5e5e5;
             }
             
+            .stickers{
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            .stickers img{
+                display: none;
+            }
             .member-card:hover{
                 transform: scale(1);
                 margin: 4rem 0px;
                 
+            }
+
+            .member-card:hover .stickers img{
+                display:flex;
             }
             .pdp-membership-footer{
                 margin: 1px;
@@ -338,9 +354,10 @@
             .stickers{
                 justify-content: flex-start;
             }
+            
 
-            .member-card .stickers{
-                display: flex;
+            .member-card .stickers img{
+                display: none;
             }
 
             .badge{
@@ -352,7 +369,7 @@
                 justify-content: center;
                 align-items: center;
                 position: absolute;
-                top: 12rem;
+                top: 10rem;
                 left: 85%;
             }
 
@@ -414,16 +431,18 @@
                     
                 </ul>
                 <div onclick="goToCheckout('{{ product.variants.first.id }}', 1)" class="cta">Get started</div>
+               
+            </div>
+            <div class="stickers">
+                <img width="22rem" height="22rem" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/image_4.png?v=1727423085"/>
+                <img width="22rem" height="22rem" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/image_5.png?v=1727423085"/>
             </div>
             <div class="pdp-membership-footer mem-foot{{ forloop.index }}">
                 <img width="" height="" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/Avatar.png?v=1727416484"/>
                 <p>Great choice! This plan offers the biggest savings and is fully refundable for 30 days.</p>
             
              </div>
-            <div class="stickers">
-                <img width="22rem" height="22rem" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/image_4.png?v=1727423085"/>
-                <img width="22rem" height="22rem" src="https://cdn.shopify.com/s/files/1/0006/5418/0388/files/image_5.png?v=1727423085"/>
-            </div>
+           
         </div>
 
     {% endfor %}
