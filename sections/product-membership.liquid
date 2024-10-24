@@ -240,9 +240,11 @@
         }
 
         .member-card-section{
-            display: grid;
-            grid-template-columns: 1fr;
-            padding-top: 2rem;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+            padding: 2rem;
             min-height: 40%;
             border-radius: 1rem;
             background-color: #ffffff;
@@ -330,6 +332,8 @@
             }
 
             .member-card-section{
+                flex-direction: column-reverse;
+                align-items: flex-start;
                 padding-top: 0rem;
             }
 
@@ -383,6 +387,7 @@
             }
 
             .subtitle{
+                text-align: left;
                 margin: 0px;
             }
            
