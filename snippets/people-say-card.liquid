@@ -9,6 +9,25 @@
 
     }
 
+    .people-rev-text{
+        color: #fff;
+        font-family: Inter !important;
+    }
+
+    .people-name-add{
+        color: #fff;
+        
+    }
+
+    .people-name-add div{
+        font-family: Inter !important;
+    }
+
+    .people-add{
+        color: #C9C9C9;
+
+    }
+
     @media screen and (max-width: 768px) {
         .card-people{
             padding: 2rem;
@@ -30,12 +49,12 @@
         <div style="font-family: Arial, Helvetica, sans-serif;  width: 6rem;  height: 6rem;  border-radius: 50%;   background: #fff;   font-size: 3.5rem;   color: #2a2a2a;  text-align: center;   line-height: 6rem;  margin: 2rem 0;">
             {{avt_text}}
         </div>
-        <div style="color: #fff;">
+        <div class="people-name-add">
             <div>{{name}}</div>
-            <div>{{addres}}</div>
+            <div class="people-add">{{addres}}</div>
         </div>
     </div>
 
-    <p style="color: #fff;">{{review-text}}</p>
+    <p class="people-rev-text">{{review-text}}</p>
 
 </div>

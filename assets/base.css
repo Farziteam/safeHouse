@@ -68,6 +68,11 @@
   src: url(TomatoGrotesk-Medium.woff);
 }
 
+@font-face {
+  font-family: SF-Pro-Text ;
+  src: url(SF-Pro-Text-Medium.otf);
+}
+
 .contains-media,
 .global-media-settings {
   --border-radius: var(--media-radius);
