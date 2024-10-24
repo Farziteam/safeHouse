@@ -1,6 +1,15 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/Group_1171274839.png",
+    "logo": "shopify://shop_images/Group_1171274839.png",
     "logo_width": 50,
     "logo_title": "Safehouse",
     "type_header_font": "assistant_n4",
@@ -9,7 +18,7 @@
     "body_scale": 100,
     "page_width": 1200,
     "spacing_sections": 0,
-    "spacing_grid_horizontal":8,
+    "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
     "animations_reveal_on_scroll": true,
     "animations_hover_elements": "none",
@@ -99,15 +108,15 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
+    "brand_description": "<p></p>",
     "brand_image_width": 100,
-    "social_facebook_link": "https:\/\/www.safehousetech.com",
-    "social_instagram_link": "https:\/\/www.safehousetech.com",
-    "social_youtube_link": "",
+    "social_facebook_link": "https://www.facebook.com/safehousetech/",
+    "social_instagram_link": "https://www.instagram.com/safehouse_tech/",
+    "social_youtube_link": "https://www.youtube.com/",
     "social_tiktok_link": "",
-    "social_twitter_link": "https:\/\/www.safehousetech.com",
+    "social_twitter_link": "https://www.safehousetech.com",
     "social_snapchat_link": "",
-    "social_pinterest_link": "https:\/\/www.safehousetech.com",
+    "social_pinterest_link": "",
     "social_tumblr_link": "",
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
@@ -350,7 +359,7 @@
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-3",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
